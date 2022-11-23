@@ -30,8 +30,7 @@ namespace Asset_Managment
             string Note = NoteTB.Text;
             //database connection
             SqlConnection connect;
-            string credentials = "Data Source=tolmount.abertay.ac.uk;USer ID=mssql2001975;Password=vUKQ5rkSPY;database=mssql2001975;";
-            connect = new SqlConnection(credentials);
+            connect = new SqlConnection(Tools.ConCreds);
 
             //exeptions for missing fields
             if (String.IsNullOrEmpty(NameTB.Text))
