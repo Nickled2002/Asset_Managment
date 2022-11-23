@@ -23,5 +23,28 @@ namespace Asset_Managment
             this.asset_ManagerTableAdapter.Fill(this.mssql2001975DataSet.Asset_Manager);
 
         }
+
+        private void Add_Btn_Click(object sender, EventArgs e)
+        {
+            //once button add is clicked new form is loaded main form is hidden
+            var add = new Add();
+            add.Show();
+            this.Hide();
+        }
+
+        private void Edit_Btn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Dlt_Btn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void This_Btn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

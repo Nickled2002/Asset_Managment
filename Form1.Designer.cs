@@ -33,9 +33,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.mssql2001975DataSet = new Asset_Managment.mssql2001975DataSet();
-            this.assetManagerBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.asset_ManagerTableAdapter = new Asset_Managment.mssql2001975DataSetTableAdapters.Asset_ManagerTableAdapter();
             this.systemNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.modelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.manufacturerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,10 +40,17 @@
             this.iPAddressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.purchaseDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.noteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.assetManagerBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.mssql2001975DataSet = new Asset_Managment.mssql2001975DataSet();
+            this.asset_ManagerTableAdapter = new Asset_Managment.mssql2001975DataSetTableAdapters.Asset_ManagerTableAdapter();
+            this.Add_Btn = new System.Windows.Forms.Button();
+            this.Edit_Btn = new System.Windows.Forms.Button();
+            this.Dlt_Btn = new System.Windows.Forms.Button();
+            this.This_Btn = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mssql2001975DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.assetManagerBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mssql2001975DataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -93,20 +97,6 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(926, 305);
             this.dataGridView1.TabIndex = 3;
-            // 
-            // mssql2001975DataSet
-            // 
-            this.mssql2001975DataSet.DataSetName = "mssql2001975DataSet";
-            this.mssql2001975DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // assetManagerBindingSource
-            // 
-            this.assetManagerBindingSource.DataMember = "Asset_Manager";
-            this.assetManagerBindingSource.DataSource = this.mssql2001975DataSet;
-            // 
-            // asset_ManagerTableAdapter
-            // 
-            this.asset_ManagerTableAdapter.ClearBeforeFill = true;
             // 
             // systemNameDataGridViewTextBoxColumn
             // 
@@ -164,11 +154,69 @@
             this.noteDataGridViewTextBoxColumn.Name = "noteDataGridViewTextBoxColumn";
             this.noteDataGridViewTextBoxColumn.Width = 125;
             // 
+            // assetManagerBindingSource
+            // 
+            this.assetManagerBindingSource.DataMember = "Asset_Manager";
+            this.assetManagerBindingSource.DataSource = this.mssql2001975DataSet;
+            // 
+            // mssql2001975DataSet
+            // 
+            this.mssql2001975DataSet.DataSetName = "mssql2001975DataSet";
+            this.mssql2001975DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // asset_ManagerTableAdapter
+            // 
+            this.asset_ManagerTableAdapter.ClearBeforeFill = true;
+            // 
+            // Add_Btn
+            // 
+            this.Add_Btn.Location = new System.Drawing.Point(12, 395);
+            this.Add_Btn.Name = "Add_Btn";
+            this.Add_Btn.Size = new System.Drawing.Size(110, 43);
+            this.Add_Btn.TabIndex = 4;
+            this.Add_Btn.Text = "Add";
+            this.Add_Btn.UseVisualStyleBackColor = true;
+            this.Add_Btn.Click += new System.EventHandler(this.Add_Btn_Click);
+            // 
+            // Edit_Btn
+            // 
+            this.Edit_Btn.Location = new System.Drawing.Point(128, 395);
+            this.Edit_Btn.Name = "Edit_Btn";
+            this.Edit_Btn.Size = new System.Drawing.Size(110, 43);
+            this.Edit_Btn.TabIndex = 5;
+            this.Edit_Btn.Text = "Edit";
+            this.Edit_Btn.UseVisualStyleBackColor = true;
+            this.Edit_Btn.Click += new System.EventHandler(this.Edit_Btn_Click);
+            // 
+            // Dlt_Btn
+            // 
+            this.Dlt_Btn.Location = new System.Drawing.Point(244, 395);
+            this.Dlt_Btn.Name = "Dlt_Btn";
+            this.Dlt_Btn.Size = new System.Drawing.Size(110, 43);
+            this.Dlt_Btn.TabIndex = 6;
+            this.Dlt_Btn.Text = "Delete";
+            this.Dlt_Btn.UseVisualStyleBackColor = true;
+            this.Dlt_Btn.Click += new System.EventHandler(this.Dlt_Btn_Click);
+            // 
+            // This_Btn
+            // 
+            this.This_Btn.Location = new System.Drawing.Point(360, 395);
+            this.This_Btn.Name = "This_Btn";
+            this.This_Btn.Size = new System.Drawing.Size(110, 43);
+            this.This_Btn.TabIndex = 7;
+            this.This_Btn.Text = "This machine";
+            this.This_Btn.UseVisualStyleBackColor = true;
+            this.This_Btn.Click += new System.EventHandler(this.This_Btn_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(926, 450);
+            this.Controls.Add(this.This_Btn);
+            this.Controls.Add(this.Dlt_Btn);
+            this.Controls.Add(this.Edit_Btn);
+            this.Controls.Add(this.Add_Btn);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -177,8 +225,8 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mssql2001975DataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.assetManagerBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mssql2001975DataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -198,6 +246,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn iPAddressDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn purchaseDateDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn noteDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button Add_Btn;
+        private System.Windows.Forms.Button Edit_Btn;
+        private System.Windows.Forms.Button Dlt_Btn;
+        private System.Windows.Forms.Button This_Btn;
     }
 }
 
