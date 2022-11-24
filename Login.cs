@@ -28,34 +28,34 @@ namespace Asset_Managment
 
             SqlCommand command;
             SqlDataAdapter addcomm = new SqlDataAdapter();
-            String Val = "";//connecting to database and
-            Val = "SELECT * FROM `User_Login`  WHERE `Username`=@Username AND `Password`=@pass";// searching for in the Username and password fields for
-            command = new SqlCommand(Val, connect);//lines 30 31
+            String select = "";//connecting to database and
+            select = "SELECT * FROM `User_Login`  WHERE `Username`=@Username AND `Password`=@pass";// searching for in the Username and password fields for
+            command = new SqlCommand(select, connect);//lines 30 31
             DataTable table = new DataTable();
-            String Password = Tools.PasswordHashed(PasswordTb.Text);
+            String Password = Tools.GetHashed(PasswordTb.Text);
             String Username = UserNameTb.Text;
-            command.Parameters.Add("@Username", SqlDbType.VarChar).Value = Username;//values
+            command.Parameters.Add("@Username", SqlDbType.VarChar).Value = Username;
             command.Parameters.Add("@Password", SqlDbType.VarChar).Value = Password;
             addcomm.InsertCommand = command;
             addcomm.InsertCommand.ExecuteNonQuery();
             addcomm.Fill(table);
             if (table.Rows.Count > 0)
             {
-
+                //success
             }
-            else
+            else//failure to login
             {
-                if (UserNameTb.Text.Trim().Equals(""))
+                if (Username.Trim().Equals(""))//conditions for failure shown to user
                 {
-                    MessageBox.Show("Enter Your Username to Login", "Empty Username", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Enter Your Username to Login", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                else if (PasswordTb.Text.Trim().Equals(""))
+                else if (Password.Trim().Equals(""))
                 {
-                    MessageBox.Show("Enter Your Password to Login", "Empty Password", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Enter Your Password to Login", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
-                    MessageBox.Show("This Username Or Password Doesn't Exists", "Wrong Data", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("This Username Or Password Doesn't Exists", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             command.Dispose();

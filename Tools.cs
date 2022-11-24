@@ -9,18 +9,18 @@ namespace Asset_Managment
 {
     public class Tools
     {
-        public static String PasswordHashed(String Var)
+        public static String GetHashed(String psswrd)
         {
-            SHA1 var2 = SHA1.Create();
-            byte[] tohash = var2.ComputeHash(Encoding.Default.GetBytes(Var));
+            SHA1 h1 = SHA1.Create();
+            byte[] tohash = h1.ComputeHash(Encoding.Default.GetBytes(psswrd));
 
-            StringBuilder vartoreturn = new StringBuilder();
+            StringBuilder GotHashed = new StringBuilder();
 
-            for (int i = 0; i < tohash.Length; i++)
+            for (int x = 0; x < tohash.Length; x++)
             {
-                vartoreturn.Append(tohash[i].ToString());
+                GotHashed.Append(tohash[x].ToString());
             }
-            return vartoreturn.ToString();
+            return GotHashed.ToString();
         }
 
         private static string connection = "Data Source=tolmount.abertay.ac.uk;USer ID=mssql2001975;Password=vUKQ5rkSPY;database=mssql2001975;";

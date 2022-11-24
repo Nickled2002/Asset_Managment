@@ -39,12 +39,15 @@ namespace Asset_Managment
 
         private void Dlt_Btn_Click(object sender, EventArgs e)
         {
-
+        //implement same system as github add name of or id or anything that the thing you want to delete has to confirm.
+        //check fields delete
         }
 
         private void This_Btn_Click(object sender, EventArgs e)
         {
-
+        //fields get autocompleted with the information of this machine
+        //possibility to add to database
+        //possibility to go back
         }
     }
 }
