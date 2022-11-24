@@ -19,7 +19,9 @@ namespace Asset_Managment
 
         private void HardDbBtn_Click(object sender, EventArgs e)
         {
-
+            Form1 add = new Form1();
+            add.Show();
+            this.Hide();
         }
 
         private void SoftDbBtn_Click(object sender, EventArgs e)

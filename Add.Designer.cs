@@ -75,7 +75,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(801, 80);
             this.label1.TabIndex = 0;
-            this.label1.Text = "ScotishGlen Assets";
+            this.label1.Text = "ScottishGlen Hardware Assets";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label2

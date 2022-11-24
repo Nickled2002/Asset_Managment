@@ -27,7 +27,7 @@ namespace Asset_Managment
         private void Add_Btn_Click(object sender, EventArgs e)
         {
             //once button add is clicked new form is loaded main form is hidden
-            var add = new Add();
+            Add add = new Add();
             add.Show();
             this.Hide();
         }
@@ -45,9 +45,12 @@ namespace Asset_Managment
 
         private void This_Btn_Click(object sender, EventArgs e)
         {
-        //fields get autocompleted with the information of this machine
-        //possibility to add to database
-        //possibility to go back
+            ThisMachine TM = new ThisMachine();
+            TM.Show();
+            this.Hide();
+            //fields get autocompleted with the information of this machine
+            //possibility to add to database
+            //possibility to go back
         }
     }
 }

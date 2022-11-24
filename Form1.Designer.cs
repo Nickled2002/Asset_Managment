@@ -30,8 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.systemNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.modelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -47,36 +45,13 @@
             this.Edit_Btn = new System.Windows.Forms.Button();
             this.Dlt_Btn = new System.Windows.Forms.Button();
             this.This_Btn = new System.Windows.Forms.Button();
-            this.panel2.SuspendLayout();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.assetManagerBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mssql2001975DataSet)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(68)))), ((int)(((byte)(173)))));
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Location = new System.Drawing.Point(1, 1);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(926, 80);
-            this.panel2.TabIndex = 2;
-            // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(132)))), ((int)(((byte)(4)))));
-            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(926, 80);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "ScotishGlen Assets";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // dataGridView1
             // 
@@ -95,6 +70,7 @@
             this.dataGridView1.DataSource = this.assetManagerBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(1, 84);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(926, 305);
@@ -106,6 +82,7 @@
             this.systemNameDataGridViewTextBoxColumn.HeaderText = "System_Name";
             this.systemNameDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.systemNameDataGridViewTextBoxColumn.Name = "systemNameDataGridViewTextBoxColumn";
+            this.systemNameDataGridViewTextBoxColumn.ReadOnly = true;
             this.systemNameDataGridViewTextBoxColumn.Width = 125;
             // 
             // modelDataGridViewTextBoxColumn
@@ -114,6 +91,7 @@
             this.modelDataGridViewTextBoxColumn.HeaderText = "Model";
             this.modelDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.modelDataGridViewTextBoxColumn.Name = "modelDataGridViewTextBoxColumn";
+            this.modelDataGridViewTextBoxColumn.ReadOnly = true;
             this.modelDataGridViewTextBoxColumn.Width = 125;
             // 
             // manufacturerDataGridViewTextBoxColumn
@@ -122,6 +100,7 @@
             this.manufacturerDataGridViewTextBoxColumn.HeaderText = "Manufacturer";
             this.manufacturerDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.manufacturerDataGridViewTextBoxColumn.Name = "manufacturerDataGridViewTextBoxColumn";
+            this.manufacturerDataGridViewTextBoxColumn.ReadOnly = true;
             this.manufacturerDataGridViewTextBoxColumn.Width = 125;
             // 
             // typeDataGridViewTextBoxColumn
@@ -130,6 +109,7 @@
             this.typeDataGridViewTextBoxColumn.HeaderText = "Type";
             this.typeDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.typeDataGridViewTextBoxColumn.Name = "typeDataGridViewTextBoxColumn";
+            this.typeDataGridViewTextBoxColumn.ReadOnly = true;
             this.typeDataGridViewTextBoxColumn.Width = 125;
             // 
             // iPAddressDataGridViewTextBoxColumn
@@ -138,6 +118,7 @@
             this.iPAddressDataGridViewTextBoxColumn.HeaderText = "IP_Address";
             this.iPAddressDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.iPAddressDataGridViewTextBoxColumn.Name = "iPAddressDataGridViewTextBoxColumn";
+            this.iPAddressDataGridViewTextBoxColumn.ReadOnly = true;
             this.iPAddressDataGridViewTextBoxColumn.Width = 125;
             // 
             // purchaseDateDataGridViewTextBoxColumn
@@ -146,6 +127,7 @@
             this.purchaseDateDataGridViewTextBoxColumn.HeaderText = "Purchase_Date";
             this.purchaseDateDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.purchaseDateDataGridViewTextBoxColumn.Name = "purchaseDateDataGridViewTextBoxColumn";
+            this.purchaseDateDataGridViewTextBoxColumn.ReadOnly = true;
             this.purchaseDateDataGridViewTextBoxColumn.Width = 125;
             // 
             // noteDataGridViewTextBoxColumn
@@ -154,6 +136,7 @@
             this.noteDataGridViewTextBoxColumn.HeaderText = "Note";
             this.noteDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.noteDataGridViewTextBoxColumn.Name = "noteDataGridViewTextBoxColumn";
+            this.noteDataGridViewTextBoxColumn.ReadOnly = true;
             this.noteDataGridViewTextBoxColumn.Width = 125;
             // 
             // assetManagerBindingSource
@@ -210,6 +193,31 @@
             this.This_Btn.UseVisualStyleBackColor = true;
             this.This_Btn.Click += new System.EventHandler(this.This_Btn_Click);
             // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(132)))), ((int)(((byte)(4)))));
+            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(926, 80);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "ScottishGlen Hardware Assets";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Black;
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Location = new System.Drawing.Point(1, 1);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(926, 80);
+            this.panel2.TabIndex = 2;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -223,20 +231,17 @@
             this.Controls.Add(this.panel2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
-            this.Text = "Asset Manager";
+            this.Text = "Hardware Asset Manager";
             this.Load += new System.EventHandler(this.Form1_Load);
-            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.assetManagerBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mssql2001975DataSet)).EndInit();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private mssql2001975DataSet mssql2001975DataSet;
         private System.Windows.Forms.BindingSource assetManagerBindingSource;
@@ -252,6 +257,8 @@
         private System.Windows.Forms.Button Edit_Btn;
         private System.Windows.Forms.Button Dlt_Btn;
         private System.Windows.Forms.Button This_Btn;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel2;
     }
 }
 
