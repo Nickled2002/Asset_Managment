@@ -20,37 +20,25 @@ namespace Asset_Managment
         }
         
             private void Lgn_Btn_Click(object sender, EventArgs e)
-        {
-            int i = 1;
-            if (i == 1)
-            {
-                MainMenu add = new MainMenu();
-                add.Show();
-                this.Hide();
-            }
-            else
             {
                 //database connection
                 SqlConnection connect;
                 connect = new SqlConnection(Tools.ConCreds);// Connect to database using credentials
-                connect.Open();//connection opened
-
-                SqlCommand command;
-                SqlDataAdapter addcomm = new SqlDataAdapter();
-                String select = "";//connecting to database and
-                select = "SELECT * FROM `User_Login`  WHERE `Username`=@Username AND `Password`=@pass";// searching for in the Username and password fields for
-                command = new SqlCommand(select, connect);//lines 30 31
-                DataTable table = new DataTable();
                 String Password = Tools.GetHashed(PasswordTb.Text);
                 String Username = UserNameTb.Text;
-                command.Parameters.Add("@Username", SqlDbType.VarChar).Value = Username;
-                command.Parameters.Add("@Password", SqlDbType.VarChar).Value = Password;
-                addcomm.InsertCommand = command;
-                addcomm.InsertCommand.ExecuteNonQuery();
-                addcomm.Fill(table);
-                if (table.Rows.Count > 0)
+                SqlCommand command;
+                SqlDataAdapter addcomm = new SqlDataAdapter();
+                //connecting to database and
+                String select = "SELECT * FROM User_Login  WHERE Username ='" + Username + "' AND Password ='" + PasswordTb.Text + "'";// searching for in the Username and password fields for
+                command = new SqlCommand(select, connect);
+                connect.Open();//connection opened
+                SqlDataReader passfind = command.ExecuteReader(); ;
+                // row = connect.ExecuteReader(select);
+                if (passfind.HasRows)
                 {
-                    //success
+                    MainMenu add = new MainMenu();
+                    add.Show();
+                    this.Hide();
                 }
                 else//failure to login
                 {
@@ -69,7 +57,7 @@ namespace Asset_Managment
                 }
                 command.Dispose();
                 connect.Close();//database closed
+           
             }
-        }
     }
 }
