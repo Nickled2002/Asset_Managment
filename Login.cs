@@ -59,5 +59,10 @@ namespace Asset_Managment
             connect.Close();//database closed
            
             }
+
+        private void PassC_CheckedChanged(object sender, EventArgs e)
+        {
+            PasswordTb.PasswordChar = PassC.Checked ? '\0' : '*';
+        }
     }
 }

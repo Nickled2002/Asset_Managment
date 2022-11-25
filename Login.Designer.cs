@@ -35,6 +35,8 @@
             this.PasswordTb = new System.Windows.Forms.TextBox();
             this.Lgn_Btn = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.PassC = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -78,7 +80,7 @@
             // Lgn_Btn
             // 
             this.Lgn_Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.Lgn_Btn.Location = new System.Drawing.Point(7, 238);
+            this.Lgn_Btn.Location = new System.Drawing.Point(7, 269);
             this.Lgn_Btn.Name = "Lgn_Btn";
             this.Lgn_Btn.Size = new System.Drawing.Size(357, 44);
             this.Lgn_Btn.TabIndex = 5;
@@ -96,11 +98,33 @@
             this.pictureBox2.TabIndex = 6;
             this.pictureBox2.TabStop = false;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label3.Location = new System.Drawing.Point(211, 243);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(129, 20);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Show Password";
+            // 
+            // PassC
+            // 
+            this.PassC.AutoSize = true;
+            this.PassC.Location = new System.Drawing.Point(346, 246);
+            this.PassC.Name = "PassC";
+            this.PassC.Size = new System.Drawing.Size(18, 17);
+            this.PassC.TabIndex = 8;
+            this.PassC.UseVisualStyleBackColor = true;
+            this.PassC.CheckedChanged += new System.EventHandler(this.PassC_CheckedChanged);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(382, 291);
+            this.ClientSize = new System.Drawing.Size(382, 323);
+            this.Controls.Add(this.PassC);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.Lgn_Btn);
             this.Controls.Add(this.PasswordTb);
@@ -125,5 +149,7 @@
         private System.Windows.Forms.TextBox PasswordTb;
         private System.Windows.Forms.Button Lgn_Btn;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.CheckBox PassC;
     }
 }
