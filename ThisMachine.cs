@@ -17,17 +17,13 @@ namespace Asset_Managment
         public ThisMachine()
         {
             InitializeComponent();
-            string name = Environment.MachineName;
-            string model = "";
-            string type = "";
-            string manu = "";
             string hostname = Dns.GetHostName(); // Retrive the Name of HOST
             Console.WriteLine(hostname);
             string IPAddy = Dns.GetHostByName(hostname).AddressList[0].ToString();
-            NameTB.Text = name;
-            ManuTB.Text = manu;
-            ModelTB.Text = model;
-            TypeTB.Text = type;
+            NameTB.Text = Tools.NameDeets;
+            ManuTB.Text = Tools.ManuDeets;
+            ModelTB.Text = Tools.ModelDeets;
+            TypeTB.Text = Tools.TypeDeets;
             IPTB.Text = IPAddy;
         }
 

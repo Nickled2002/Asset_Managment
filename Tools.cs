@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.Net;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
@@ -27,9 +28,21 @@ namespace Asset_Managment
 
         public static string ConCreds { get => connection; }
 
+        private static string Type = "Laptop";
 
+        public static string TypeDeets { get => Type; }
 
+        private static string Manu = "Dell";
 
-    
+        public static string ManuDeets { get => Manu; }
+
+        private static string Model = "Dell G15 5511";
+
+        public static string ModelDeets { get => Model; }
+
+        private static string Name = Environment.MachineName;
+
+        public static string NameDeets { get => Name; }
+
     }
 }
