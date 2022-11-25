@@ -28,9 +28,9 @@ namespace Asset_Managment
             String Username = UserNameTb.Text;
             SqlDataAdapter addcomm = new SqlDataAdapter();
             //connecting to database and
-            String select = "SELECT * FROM User_Login  WHERE Username = @usernamE AND Password ='" + PasswordTb.Text + "'";// searching for in the Username and password fields for
+            String select = "SELECT * FROM User_Login  WHERE Username = @usernamE AND Password ='" + Password + "'";// searching for in the Username and password fields for
             SqlCommand command = new SqlCommand(select, connect);
-            command.Parameters.AddWithValue("@usernamE",Username);
+            command.Parameters.AddWithValue("@usernamE", Username);
             connect.Open();//connection opened
             SqlDataReader passfind = command.ExecuteReader(); ;
             // row = connect.ExecuteReader(select);
