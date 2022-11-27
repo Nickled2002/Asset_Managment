@@ -86,6 +86,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>mssql2001975DataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="mssql2001975DataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>mssql2001975DataSet2.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SoftwareMain.cs">
@@ -153,6 +158,17 @@
     </None>
     <None Include="mssql2001975DataSet1.xss">
       <DependentUpon>mssql2001975DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="mssql2001975DataSet2.xsc">
+      <DependentUpon>mssql2001975DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="mssql2001975DataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>mssql2001975DataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="mssql2001975DataSet2.xss">
+      <DependentUpon>mssql2001975DataSet2.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

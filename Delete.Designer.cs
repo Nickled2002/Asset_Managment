@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Delete));
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -36,8 +37,22 @@
             this.SystemNameTb = new System.Windows.Forms.TextBox();
             this.DltBtn = new System.Windows.Forms.Button();
             this.BackBtn = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.mssql2001975DataSet2 = new Asset_Managment.mssql2001975DataSet2();
+            this.assetManagerBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.asset_ManagerTableAdapter = new Asset_Managment.mssql2001975DataSet2TableAdapters.Asset_ManagerTableAdapter();
+            this.systemNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.modelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.manufacturerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.typeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iPAddressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.purchaseDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.noteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mssql2001975DataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mssql2001975DataSet2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.assetManagerBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -73,19 +88,19 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 352);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(12, 353);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(517, 26);
+            this.label2.Size = new System.Drawing.Size(454, 25);
             this.label2.TabIndex = 6;
-            this.label2.Text = "Enter The system name that you would like to delete";
+            this.label2.Text = "Enter the system name that you would like to delete";
             // 
             // SystemNameTb
             // 
-            this.SystemNameTb.Location = new System.Drawing.Point(535, 345);
+            this.SystemNameTb.Location = new System.Drawing.Point(520, 344);
             this.SystemNameTb.Multiline = true;
             this.SystemNameTb.Name = "SystemNameTb";
-            this.SystemNameTb.Size = new System.Drawing.Size(253, 33);
+            this.SystemNameTb.Size = new System.Drawing.Size(268, 33);
             this.SystemNameTb.TabIndex = 7;
             // 
             // DltBtn
@@ -108,11 +123,112 @@
             this.BackBtn.UseVisualStyleBackColor = true;
             this.BackBtn.Click += new System.EventHandler(this.BackBtn_Click);
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.systemNameDataGridViewTextBoxColumn,
+            this.modelDataGridViewTextBoxColumn,
+            this.manufacturerDataGridViewTextBoxColumn,
+            this.typeDataGridViewTextBoxColumn,
+            this.iPAddressDataGridViewTextBoxColumn,
+            this.purchaseDateDataGridViewTextBoxColumn,
+            this.noteDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.assetManagerBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(2, 89);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(801, 249);
+            this.dataGridView1.TabIndex = 10;
+            // 
+            // mssql2001975DataSet2
+            // 
+            this.mssql2001975DataSet2.DataSetName = "mssql2001975DataSet2";
+            this.mssql2001975DataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // assetManagerBindingSource
+            // 
+            this.assetManagerBindingSource.DataMember = "Asset_Manager";
+            this.assetManagerBindingSource.DataSource = this.mssql2001975DataSet2;
+            // 
+            // asset_ManagerTableAdapter
+            // 
+            this.asset_ManagerTableAdapter.ClearBeforeFill = true;
+            // 
+            // systemNameDataGridViewTextBoxColumn
+            // 
+            this.systemNameDataGridViewTextBoxColumn.DataPropertyName = "System_Name";
+            this.systemNameDataGridViewTextBoxColumn.HeaderText = "System_Name";
+            this.systemNameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.systemNameDataGridViewTextBoxColumn.Name = "systemNameDataGridViewTextBoxColumn";
+            this.systemNameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.systemNameDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // modelDataGridViewTextBoxColumn
+            // 
+            this.modelDataGridViewTextBoxColumn.DataPropertyName = "Model";
+            this.modelDataGridViewTextBoxColumn.HeaderText = "Model";
+            this.modelDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.modelDataGridViewTextBoxColumn.Name = "modelDataGridViewTextBoxColumn";
+            this.modelDataGridViewTextBoxColumn.ReadOnly = true;
+            this.modelDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // manufacturerDataGridViewTextBoxColumn
+            // 
+            this.manufacturerDataGridViewTextBoxColumn.DataPropertyName = "Manufacturer";
+            this.manufacturerDataGridViewTextBoxColumn.HeaderText = "Manufacturer";
+            this.manufacturerDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.manufacturerDataGridViewTextBoxColumn.Name = "manufacturerDataGridViewTextBoxColumn";
+            this.manufacturerDataGridViewTextBoxColumn.ReadOnly = true;
+            this.manufacturerDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // typeDataGridViewTextBoxColumn
+            // 
+            this.typeDataGridViewTextBoxColumn.DataPropertyName = "Type";
+            this.typeDataGridViewTextBoxColumn.HeaderText = "Type";
+            this.typeDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.typeDataGridViewTextBoxColumn.Name = "typeDataGridViewTextBoxColumn";
+            this.typeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.typeDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // iPAddressDataGridViewTextBoxColumn
+            // 
+            this.iPAddressDataGridViewTextBoxColumn.DataPropertyName = "IP_Address";
+            this.iPAddressDataGridViewTextBoxColumn.HeaderText = "IP_Address";
+            this.iPAddressDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.iPAddressDataGridViewTextBoxColumn.Name = "iPAddressDataGridViewTextBoxColumn";
+            this.iPAddressDataGridViewTextBoxColumn.ReadOnly = true;
+            this.iPAddressDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // purchaseDateDataGridViewTextBoxColumn
+            // 
+            this.purchaseDateDataGridViewTextBoxColumn.DataPropertyName = "Purchase_Date";
+            this.purchaseDateDataGridViewTextBoxColumn.HeaderText = "Purchase_Date";
+            this.purchaseDateDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.purchaseDateDataGridViewTextBoxColumn.Name = "purchaseDateDataGridViewTextBoxColumn";
+            this.purchaseDateDataGridViewTextBoxColumn.ReadOnly = true;
+            this.purchaseDateDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // noteDataGridViewTextBoxColumn
+            // 
+            this.noteDataGridViewTextBoxColumn.DataPropertyName = "Note";
+            this.noteDataGridViewTextBoxColumn.HeaderText = "Note";
+            this.noteDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.noteDataGridViewTextBoxColumn.Name = "noteDataGridViewTextBoxColumn";
+            this.noteDataGridViewTextBoxColumn.ReadOnly = true;
+            this.noteDataGridViewTextBoxColumn.Width = 125;
+            // 
             // Delete
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.BackBtn);
             this.Controls.Add(this.DltBtn);
             this.Controls.Add(this.SystemNameTb);
@@ -121,8 +237,12 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Delete";
             this.Text = "Delete Item";
+            this.Load += new System.EventHandler(this.Delete_Load);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.mssql2001975DataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mssql2001975DataSet2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.assetManagerBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -137,5 +257,16 @@
         private System.Windows.Forms.TextBox SystemNameTb;
         private System.Windows.Forms.Button DltBtn;
         private System.Windows.Forms.Button BackBtn;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private mssql2001975DataSet2 mssql2001975DataSet2;
+        private System.Windows.Forms.BindingSource assetManagerBindingSource;
+        private mssql2001975DataSet2TableAdapters.Asset_ManagerTableAdapter asset_ManagerTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn systemNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn modelDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn manufacturerDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn typeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iPAddressDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn purchaseDateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn noteDataGridViewTextBoxColumn;
     }
 }
