@@ -34,7 +34,17 @@ namespace Asset_Managment
 
         private void Edit_Btn_Click(object sender, EventArgs e)
         {
-
+            DialogResult YesOrNo = MessageBox.Show("Are you sure you want to edit the table? The changes are permanent and cannot be automatically undone: ", "Edit Table", MessageBoxButtons.YesNo);
+            if (YesOrNo == DialogResult.Yes)
+            {
+                Edit edit = new Edit();//main form loaded this form closed
+                edit.Show();
+                this.Close();
+            }
+            else if (YesOrNo == DialogResult.No)
+            {
+                
+            }
         }
 
         private void Dlt_Btn_Click(object sender, EventArgs e)
