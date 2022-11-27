@@ -50,6 +50,7 @@
             this.YearTB = new System.Windows.Forms.TextBox();
             this.NoteTB = new System.Windows.Forms.TextBox();
             this.AddBtn = new System.Windows.Forms.Button();
+            this.BackBtn = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -250,11 +251,22 @@
             this.AddBtn.UseVisualStyleBackColor = true;
             this.AddBtn.Click += new System.EventHandler(this.AddBtn_Click);
             // 
+            // BackBtn
+            // 
+            this.BackBtn.Location = new System.Drawing.Point(12, 366);
+            this.BackBtn.Name = "BackBtn";
+            this.BackBtn.Size = new System.Drawing.Size(156, 74);
+            this.BackBtn.TabIndex = 24;
+            this.BackBtn.Text = "Back";
+            this.BackBtn.UseVisualStyleBackColor = true;
+            this.BackBtn.Click += new System.EventHandler(this.BackBtn_Click);
+            // 
             // Add
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.BackBtn);
             this.Controls.Add(this.AddBtn);
             this.Controls.Add(this.NoteTB);
             this.Controls.Add(this.YearTB);
@@ -307,5 +319,6 @@
         private System.Windows.Forms.TextBox YearTB;
         private System.Windows.Forms.TextBox NoteTB;
         private System.Windows.Forms.Button AddBtn;
+        private System.Windows.Forms.Button BackBtn;
     }
 }

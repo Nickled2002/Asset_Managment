@@ -21,19 +21,19 @@ namespace Asset_Managment
         
             private void Lgn_Btn_Click(object sender, EventArgs e)
             {
-            //database connection
-            SqlConnection connect;
-            connect = new SqlConnection(Tools.ConCreds);// Connect to database using credentials
-            String Password = Tools.GetHashed(PasswordTb.Text);
-            String Username = UserNameTb.Text;
-            SqlDataAdapter addcomm = new SqlDataAdapter();
-            //connecting to database and
-            String select = "SELECT * FROM User_Login  WHERE Username = @usernamE AND Password ='" + Password + "'";// searching for in the Username and password fields for
-            SqlCommand command = new SqlCommand(select, connect);
-            command.Parameters.AddWithValue("@usernamE", Username);
-            connect.Open();//connection opened
-            SqlDataReader passfind = command.ExecuteReader(); ;
-            // row = connect.ExecuteReader(select);
+                //database connection
+                SqlConnection connect;
+                connect = new SqlConnection(Tools.ConCreds);// Connect to database using credentials
+                String Password = Tools.GetHashed(PasswordTb.Text);
+                String Username = UserNameTb.Text;
+                SqlDataAdapter addcomm = new SqlDataAdapter();
+                //connecting to database and
+                String select = "SELECT * FROM User_Login  WHERE Username = @usernamE AND Password = @passworD";// searching for in the Username and password fields for
+                SqlCommand command = new SqlCommand(select, connect);
+                command.Parameters.AddWithValue("@usernamE", Username);
+                command.Parameters.AddWithValue("@passworD", Password);
+                connect.Open();//connection opened
+                SqlDataReader passfind = command.ExecuteReader();
                 if (passfind.HasRows)
                 {
                     MainMenu add = new MainMenu();
@@ -55,10 +55,10 @@ namespace Asset_Managment
                         MessageBox.Show("This Username Or Password Doesn't Exists", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
-            command.Dispose();
-            connect.Close();//database closed
-           
+                command.Dispose();
+                connect.Close();//database closed
             }
+            
 
         private void PassC_CheckedChanged(object sender, EventArgs e)
         {

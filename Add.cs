@@ -127,5 +127,11 @@ namespace Asset_Managment
             }
         }
 
+        private void BackBtn_Click(object sender, EventArgs e)
+        {
+            var Main = new Form1();//main form loaded this form closed
+            Main.Show();
+            this.Close();
+        }
     }
 }
