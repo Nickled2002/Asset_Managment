@@ -29,7 +29,7 @@ namespace Asset_Managment
             //once button add is clicked new form is loaded main form is hidden
             Add add = new Add();
             add.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void Edit_Btn_Click(object sender, EventArgs e)
@@ -51,14 +51,14 @@ namespace Asset_Managment
         {
         Delete delete = new Delete();
         delete.Show();
-        this.Hide();
+        this.Close();
         }
 
         private void This_Btn_Click(object sender, EventArgs e)
         {
             ThisMachine TM = new ThisMachine();
             TM.Show();
-            this.Hide();
+            this.Close();
             //fields get autocompleted with the information of this machine
             //possibility to add to database
             //possibility to go back

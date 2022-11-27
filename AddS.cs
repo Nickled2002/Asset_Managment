@@ -10,30 +10,23 @@ using System.Windows.Forms;
 
 namespace Asset_Managment
 {
-    public partial class MainMenu : Form
+    public partial class AddS : Form
     {
-        public MainMenu()
+        public AddS()
         {
             InitializeComponent();
         }
 
-        private void HardDbBtn_Click(object sender, EventArgs e)
+        private void AddBtn_Click(object sender, EventArgs e)
         {
-            Form1 add = new Form1();
-            add.Show();
-            this.Close();
+
         }
 
-        private void SoftDbBtn_Click(object sender, EventArgs e)
+        private void BackBtn_Click(object sender, EventArgs e)
         {
             SoftwareMain softwareMain = new SoftwareMain();
             softwareMain.Show();
             this.Close();
-        }
-
-        private void VulnSrchBtn_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

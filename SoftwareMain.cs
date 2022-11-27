@@ -26,7 +26,9 @@ namespace Asset_Managment
 
         private void AddBtn_Click(object sender, EventArgs e)
         {
-
+            AddS adds = new AddS();
+            adds.Show();
+            this.Close();
         }
 
         private void EditBtn_Click(object sender, EventArgs e)
