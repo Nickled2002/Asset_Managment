@@ -32,21 +32,27 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SoftwareMain));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.mssql2001975DataSet1 = new Asset_Managment.mssql2001975DataSet1();
             this.assetManagerSoftwareBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.mssql2001975DataSet1 = new Asset_Managment.mssql2001975DataSet1();
             this.asset_Manager_SoftwareTableAdapter = new Asset_Managment.mssql2001975DataSet1TableAdapters.Asset_Manager_SoftwareTableAdapter();
-            this.operatingSystemNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.versionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.manufacturerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.AddBtn = new System.Windows.Forms.Button();
             this.EditBtn = new System.Windows.Forms.Button();
             this.DeleteBtn = new System.Windows.Forms.Button();
             this.TMSBtn = new System.Windows.Forms.Button();
+            this.BackBtn = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.mssql2001975DataSet4 = new Asset_Managment.mssql2001975DataSet4();
+            this.assetManagerSoftwareBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.asset_Manager_SoftwareTableAdapter1 = new Asset_Managment.mssql2001975DataSet4TableAdapters.Asset_Manager_SoftwareTableAdapter();
+            this.operatingSystemNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.versionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.manufacturerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mssql2001975DataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.assetManagerSoftwareBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mssql2001975DataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mssql2001975DataSet4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.assetManagerSoftwareBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -74,6 +80,70 @@
             this.label2.Text = "ScottishGlen Software Assets";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // assetManagerSoftwareBindingSource
+            // 
+            this.assetManagerSoftwareBindingSource.DataMember = "Asset_Manager_Software";
+            this.assetManagerSoftwareBindingSource.DataSource = this.mssql2001975DataSet1;
+            // 
+            // mssql2001975DataSet1
+            // 
+            this.mssql2001975DataSet1.DataSetName = "mssql2001975DataSet1";
+            this.mssql2001975DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // asset_Manager_SoftwareTableAdapter
+            // 
+            this.asset_Manager_SoftwareTableAdapter.ClearBeforeFill = true;
+            // 
+            // AddBtn
+            // 
+            this.AddBtn.Location = new System.Drawing.Point(9, 324);
+            this.AddBtn.Name = "AddBtn";
+            this.AddBtn.Size = new System.Drawing.Size(108, 50);
+            this.AddBtn.TabIndex = 6;
+            this.AddBtn.Text = "Add";
+            this.AddBtn.UseVisualStyleBackColor = true;
+            this.AddBtn.Click += new System.EventHandler(this.AddBtn_Click);
+            // 
+            // EditBtn
+            // 
+            this.EditBtn.Location = new System.Drawing.Point(123, 324);
+            this.EditBtn.Name = "EditBtn";
+            this.EditBtn.Size = new System.Drawing.Size(108, 50);
+            this.EditBtn.TabIndex = 7;
+            this.EditBtn.Text = "Edit";
+            this.EditBtn.UseVisualStyleBackColor = true;
+            this.EditBtn.Click += new System.EventHandler(this.EditBtn_Click);
+            // 
+            // DeleteBtn
+            // 
+            this.DeleteBtn.Location = new System.Drawing.Point(237, 324);
+            this.DeleteBtn.Name = "DeleteBtn";
+            this.DeleteBtn.Size = new System.Drawing.Size(108, 50);
+            this.DeleteBtn.TabIndex = 8;
+            this.DeleteBtn.Text = "Delete";
+            this.DeleteBtn.UseVisualStyleBackColor = true;
+            this.DeleteBtn.Click += new System.EventHandler(this.DeleteBtn_Click);
+            // 
+            // TMSBtn
+            // 
+            this.TMSBtn.Location = new System.Drawing.Point(351, 324);
+            this.TMSBtn.Name = "TMSBtn";
+            this.TMSBtn.Size = new System.Drawing.Size(108, 50);
+            this.TMSBtn.TabIndex = 9;
+            this.TMSBtn.Text = "System Software";
+            this.TMSBtn.UseVisualStyleBackColor = true;
+            this.TMSBtn.Click += new System.EventHandler(this.TMSBtn_Click);
+            // 
+            // BackBtn
+            // 
+            this.BackBtn.Location = new System.Drawing.Point(564, 324);
+            this.BackBtn.Name = "BackBtn";
+            this.BackBtn.Size = new System.Drawing.Size(108, 50);
+            this.BackBtn.TabIndex = 10;
+            this.BackBtn.Text = "Back";
+            this.BackBtn.UseVisualStyleBackColor = true;
+            this.BackBtn.Click += new System.EventHandler(this.BackBtn_Click);
+            // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
@@ -84,33 +154,33 @@
             this.operatingSystemNameDataGridViewTextBoxColumn,
             this.versionDataGridViewTextBoxColumn,
             this.manufacturerDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.assetManagerSoftwareBindingSource;
+            this.dataGridView1.DataSource = this.assetManagerSoftwareBindingSource1;
             this.dataGridView1.Location = new System.Drawing.Point(1, 84);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(683, 225);
-            this.dataGridView1.TabIndex = 5;
+            this.dataGridView1.Size = new System.Drawing.Size(683, 234);
+            this.dataGridView1.TabIndex = 11;
             // 
-            // mssql2001975DataSet1
+            // mssql2001975DataSet4
             // 
-            this.mssql2001975DataSet1.DataSetName = "mssql2001975DataSet1";
-            this.mssql2001975DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.mssql2001975DataSet4.DataSetName = "mssql2001975DataSet4";
+            this.mssql2001975DataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // assetManagerSoftwareBindingSource
+            // assetManagerSoftwareBindingSource1
             // 
-            this.assetManagerSoftwareBindingSource.DataMember = "Asset_Manager_Software";
-            this.assetManagerSoftwareBindingSource.DataSource = this.mssql2001975DataSet1;
+            this.assetManagerSoftwareBindingSource1.DataMember = "Asset_Manager_Software";
+            this.assetManagerSoftwareBindingSource1.DataSource = this.mssql2001975DataSet4;
             // 
-            // asset_Manager_SoftwareTableAdapter
+            // asset_Manager_SoftwareTableAdapter1
             // 
-            this.asset_Manager_SoftwareTableAdapter.ClearBeforeFill = true;
+            this.asset_Manager_SoftwareTableAdapter1.ClearBeforeFill = true;
             // 
             // operatingSystemNameDataGridViewTextBoxColumn
             // 
-            this.operatingSystemNameDataGridViewTextBoxColumn.DataPropertyName = "Operating System Name";
-            this.operatingSystemNameDataGridViewTextBoxColumn.HeaderText = "Operating System Name";
+            this.operatingSystemNameDataGridViewTextBoxColumn.DataPropertyName = "Operating_System_Name";
+            this.operatingSystemNameDataGridViewTextBoxColumn.HeaderText = "Operating_System_Name";
             this.operatingSystemNameDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.operatingSystemNameDataGridViewTextBoxColumn.Name = "operatingSystemNameDataGridViewTextBoxColumn";
             this.operatingSystemNameDataGridViewTextBoxColumn.ReadOnly = true;
@@ -134,65 +204,28 @@
             this.manufacturerDataGridViewTextBoxColumn.ReadOnly = true;
             this.manufacturerDataGridViewTextBoxColumn.Width = 125;
             // 
-            // AddBtn
-            // 
-            this.AddBtn.Location = new System.Drawing.Point(9, 324);
-            this.AddBtn.Name = "AddBtn";
-            this.AddBtn.Size = new System.Drawing.Size(162, 50);
-            this.AddBtn.TabIndex = 6;
-            this.AddBtn.Text = "Add";
-            this.AddBtn.UseVisualStyleBackColor = true;
-            this.AddBtn.Click += new System.EventHandler(this.AddBtn_Click);
-            // 
-            // EditBtn
-            // 
-            this.EditBtn.Location = new System.Drawing.Point(177, 324);
-            this.EditBtn.Name = "EditBtn";
-            this.EditBtn.Size = new System.Drawing.Size(162, 50);
-            this.EditBtn.TabIndex = 7;
-            this.EditBtn.Text = "Edit";
-            this.EditBtn.UseVisualStyleBackColor = true;
-            this.EditBtn.Click += new System.EventHandler(this.EditBtn_Click);
-            // 
-            // DeleteBtn
-            // 
-            this.DeleteBtn.Location = new System.Drawing.Point(345, 324);
-            this.DeleteBtn.Name = "DeleteBtn";
-            this.DeleteBtn.Size = new System.Drawing.Size(162, 50);
-            this.DeleteBtn.TabIndex = 8;
-            this.DeleteBtn.Text = "Delete";
-            this.DeleteBtn.UseVisualStyleBackColor = true;
-            this.DeleteBtn.Click += new System.EventHandler(this.DeleteBtn_Click);
-            // 
-            // TMSBtn
-            // 
-            this.TMSBtn.Location = new System.Drawing.Point(513, 324);
-            this.TMSBtn.Name = "TMSBtn";
-            this.TMSBtn.Size = new System.Drawing.Size(162, 50);
-            this.TMSBtn.TabIndex = 9;
-            this.TMSBtn.Text = "System Software";
-            this.TMSBtn.UseVisualStyleBackColor = true;
-            this.TMSBtn.Click += new System.EventHandler(this.TMSBtn_Click);
-            // 
             // SoftwareMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(684, 386);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.BackBtn);
             this.Controls.Add(this.TMSBtn);
             this.Controls.Add(this.DeleteBtn);
             this.Controls.Add(this.EditBtn);
             this.Controls.Add(this.AddBtn);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "SoftwareMain";
             this.Text = "Software Asset Manager";
             this.Load += new System.EventHandler(this.SoftwareMain_Load);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mssql2001975DataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.assetManagerSoftwareBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mssql2001975DataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mssql2001975DataSet4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.assetManagerSoftwareBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -201,16 +234,20 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private mssql2001975DataSet1 mssql2001975DataSet1;
         private System.Windows.Forms.BindingSource assetManagerSoftwareBindingSource;
         private mssql2001975DataSet1TableAdapters.Asset_Manager_SoftwareTableAdapter asset_Manager_SoftwareTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn operatingSystemNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn versionDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn manufacturerDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button AddBtn;
         private System.Windows.Forms.Button EditBtn;
         private System.Windows.Forms.Button DeleteBtn;
         private System.Windows.Forms.Button TMSBtn;
+        private System.Windows.Forms.Button BackBtn;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private mssql2001975DataSet4 mssql2001975DataSet4;
+        private System.Windows.Forms.BindingSource assetManagerSoftwareBindingSource1;
+        private mssql2001975DataSet4TableAdapters.Asset_Manager_SoftwareTableAdapter asset_Manager_SoftwareTableAdapter1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn operatingSystemNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn versionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn manufacturerDataGridViewTextBoxColumn;
     }
 }

@@ -184,7 +184,7 @@
             this.FinishBtn.Name = "FinishBtn";
             this.FinishBtn.Size = new System.Drawing.Size(237, 63);
             this.FinishBtn.TabIndex = 8;
-            this.FinishBtn.Text = "Finish editing";
+            this.FinishBtn.Text = "Finish Editing";
             this.FinishBtn.UseVisualStyleBackColor = true;
             this.FinishBtn.Click += new System.EventHandler(this.FinishBtn_Click);
             // 

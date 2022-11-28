@@ -19,8 +19,8 @@ namespace Asset_Managment
 
         private void SoftwareMain_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'mssql2001975DataSet1.Asset_Manager_Software' table. You can move, or remove it, as needed.
-            this.asset_Manager_SoftwareTableAdapter.Fill(this.mssql2001975DataSet1.Asset_Manager_Software);
+            // TODO: This line of code loads data into the 'mssql2001975DataSet4.Asset_Manager_Software' table. You can move, or remove it, as needed.
+            this.asset_Manager_SoftwareTableAdapter1.Fill(this.mssql2001975DataSet4.Asset_Manager_Software);
 
         }
 
@@ -33,17 +33,32 @@ namespace Asset_Managment
 
         private void EditBtn_Click(object sender, EventArgs e)
         {
-
+            DialogResult YesOrNo = MessageBox.Show("Are you sure you want to edit the table? The changes are permanent and cannot be automatically undone: ", "Edit Table", MessageBoxButtons.YesNo);
+            if (YesOrNo == DialogResult.Yes)
+            {
+                EditS edits = new EditS();
+                edits.Show();
+                this.Close();
+            }
         }
 
         private void DeleteBtn_Click(object sender, EventArgs e)
         {
-
+            DeleteS deleteS = new DeleteS();
+            deleteS.Show();
+            this.Close();
         }
 
         private void TMSBtn_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void BackBtn_Click(object sender, EventArgs e)
+        {
+            MainMenu mainMenu = new MainMenu();
+            mainMenu.Show();
+            this.Close();
         }
     }
 }

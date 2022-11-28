@@ -37,6 +37,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.PassC = new System.Windows.Forms.CheckBox();
+            this.ExitBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -80,9 +81,9 @@
             // Lgn_Btn
             // 
             this.Lgn_Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.Lgn_Btn.Location = new System.Drawing.Point(7, 269);
+            this.Lgn_Btn.Location = new System.Drawing.Point(160, 269);
             this.Lgn_Btn.Name = "Lgn_Btn";
-            this.Lgn_Btn.Size = new System.Drawing.Size(357, 44);
+            this.Lgn_Btn.Size = new System.Drawing.Size(204, 44);
             this.Lgn_Btn.TabIndex = 5;
             this.Lgn_Btn.Text = "Login";
             this.Lgn_Btn.UseVisualStyleBackColor = true;
@@ -118,11 +119,23 @@
             this.PassC.UseVisualStyleBackColor = true;
             this.PassC.CheckedChanged += new System.EventHandler(this.PassC_CheckedChanged);
             // 
+            // ExitBtn
+            // 
+            this.ExitBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ExitBtn.Location = new System.Drawing.Point(2, 269);
+            this.ExitBtn.Name = "ExitBtn";
+            this.ExitBtn.Size = new System.Drawing.Size(152, 44);
+            this.ExitBtn.TabIndex = 9;
+            this.ExitBtn.Text = "Exit";
+            this.ExitBtn.UseVisualStyleBackColor = true;
+            this.ExitBtn.Click += new System.EventHandler(this.ExitBtn_Click);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(382, 323);
+            this.ClientSize = new System.Drawing.Size(382, 316);
+            this.Controls.Add(this.ExitBtn);
             this.Controls.Add(this.PassC);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox2);
@@ -151,5 +164,6 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.CheckBox PassC;
+        private System.Windows.Forms.Button ExitBtn;
     }
 }

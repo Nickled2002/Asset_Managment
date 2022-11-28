@@ -41,10 +41,6 @@ namespace Asset_Managment
                 edit.Show();
                 this.Close();
             }
-            else if (YesOrNo == DialogResult.No)
-            {
-                
-            }
         }
 
         private void Dlt_Btn_Click(object sender, EventArgs e)
@@ -62,6 +58,13 @@ namespace Asset_Managment
             //fields get autocompleted with the information of this machine
             //possibility to add to database
             //possibility to go back
+        }
+
+        private void BackBtn_Click(object sender, EventArgs e)
+        {
+            MainMenu mainMenu = new MainMenu();
+            mainMenu.Show();
+            this.Close();
         }
     }
 }

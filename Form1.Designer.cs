@@ -47,6 +47,7 @@
             this.This_Btn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.BackBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.assetManagerBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mssql2001975DataSet)).BeginInit();
@@ -218,11 +219,22 @@
             this.panel2.Size = new System.Drawing.Size(926, 80);
             this.panel2.TabIndex = 2;
             // 
+            // BackBtn
+            // 
+            this.BackBtn.Location = new System.Drawing.Point(804, 395);
+            this.BackBtn.Name = "BackBtn";
+            this.BackBtn.Size = new System.Drawing.Size(110, 43);
+            this.BackBtn.TabIndex = 8;
+            this.BackBtn.Text = "Back";
+            this.BackBtn.UseVisualStyleBackColor = true;
+            this.BackBtn.Click += new System.EventHandler(this.BackBtn_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(926, 450);
+            this.Controls.Add(this.BackBtn);
             this.Controls.Add(this.This_Btn);
             this.Controls.Add(this.Dlt_Btn);
             this.Controls.Add(this.Edit_Btn);
@@ -259,6 +271,7 @@
         private System.Windows.Forms.Button This_Btn;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button BackBtn;
     }
 }
 

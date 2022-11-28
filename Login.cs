@@ -64,5 +64,20 @@ namespace Asset_Managment
         {
             PasswordTb.PasswordChar = PassC.Checked ? '\0' : '*';
         }
+        //696.58
+        
+
+        private void ExitBtn_Click(object sender, EventArgs e)
+        {
+            DialogResult YesOrNo = MessageBox.Show("Are you sure you want to exit the app?", "Exit", MessageBoxButtons.YesNo);
+            if (YesOrNo == DialogResult.Yes)
+            { 
+                this.Close();
+            }
+            else if (YesOrNo == DialogResult.No)
+            {
+
+            }
+        }
     }
 }
