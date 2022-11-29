@@ -149,6 +149,12 @@
     <Compile Include="ThisMachine.Designer.cs">
       <DependentUpon>ThisMachine.cs</DependentUpon>
     </Compile>
+    <Compile Include="ThisMachineS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThisMachineS.Designer.cs">
+      <DependentUpon>ThisMachineS.cs</DependentUpon>
+    </Compile>
     <Compile Include="Tools.cs" />
     <EmbeddedResource Include="Add.resx">
       <DependentUpon>Add.cs</DependentUpon>
@@ -192,6 +198,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ThisMachine.resx">
       <DependentUpon>ThisMachine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThisMachineS.resx">
+      <DependentUpon>ThisMachineS.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="mssql2001975DataSet.xsc">
       <DependentUpon>mssql2001975DataSet.xsd</DependentUpon>

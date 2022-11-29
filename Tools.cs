@@ -44,5 +44,16 @@ namespace Asset_Managment
 
         public static string NameDeets { get => Name; }
 
+        private static string OSName = ""+Environment.OSVersion;
+
+        public static string OSNameDeets { get => OSName; }
+
+        private static string OSVersion = "" + Environment.OSVersion;
+
+        public static string OSVersionDeets { get => OSVersion; }
+
+        private static string OSManu = "Microsoft";
+
+        public static string OSManuDeets { get => OSManu; }
     }
 }
