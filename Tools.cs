@@ -52,8 +52,9 @@ namespace Asset_Managment
 
         public static string OSVersionDeets { get => OSVersion; }
 
-        private static string OSManu = "Microsoft";
 
+        private static string OSManu = "Microsoft";
+        
         public static string OSManuDeets { get => OSManu; }
     }
 }
