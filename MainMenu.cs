@@ -38,7 +38,9 @@ namespace Asset_Managment
 
         private void SnHBtn_Click(object sender, EventArgs e)
         {
-
+            SoftwareAndHardware softwareAndHardware = new SoftwareAndHardware();
+            softwareAndHardware.Show();
+            this.Close();
         }
     }
 }

@@ -20,31 +20,45 @@ namespace Asset_Managment
 
         private void DltBtn_Click(object sender, EventArgs e)
         {
-            if (SystemNameTb.Text == "")
+            if (IdTb.Text == "")
             {
-                MessageBox.Show("System Name is missing", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Hardware Id is missing", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
-                string sName = SystemNameTb.Text;
+                string sId = IdTb.Text;
                 SqlConnection connect;
                 connect = new SqlConnection(Tools.ConCreds);// Connect to database using credentials
                 SqlDataAdapter addcomm = new SqlDataAdapter();
                 //connecting to database and
-                String select = "SELECT * FROM Asset_Manager  WHERE System_Name = @systemnamE";// searching for in the Username and password fields for
+                String select = "SELECT * FROM Asset_Manager_Hardware  WHERE Hardware_Id = @systemId";// searching for in the Username and password fields for
                 SqlCommand command = new SqlCommand(select, connect);
-                command.Parameters.AddWithValue("@systemnamE", sName);
+                command.Parameters.AddWithValue("@systemId", sId);
                 connect.Open();//connection opened
                 SqlDataReader delfind = command.ExecuteReader();
                 if (delfind.HasRows)
                 {
-                    DialogResult YesOrNo = MessageBox.Show("Are you sure you want to delete system: " + sName, "Found", MessageBoxButtons.YesNo);
+                    DialogResult YesOrNo = MessageBox.Show("Are you sure you want to delete system: " + sId, "Found", MessageBoxButtons.YesNo);
                     if (YesOrNo == DialogResult.Yes)
                     {
+                        connect.Close();
                         //do something to be implemented
+                        SqlConnection connect1;
+                        connect1 = new SqlConnection(Tools.ConCreds);
+                        String Delsel = "DELETE FROM Asset_Manager_Hardware WHERE Hardware_Id = @systemId ";
+                        SqlCommand commandDlt = new SqlCommand(Delsel, connect1);
+                        commandDlt.Parameters.AddWithValue("@systemId", sId);
+                        connect1.Open();//connection opened
+                        commandDlt.ExecuteNonQuery();
+                        connect1.Close();
+                        var Main = new Form1();//main form loaded this form closed
+                        Main.Show();
+                        this.Close();
+
                     }
                     else if (YesOrNo == DialogResult.No)
                     {
+                        connect.Close();
                         var Main = new Form1();//main form loaded this form closed
                         Main.Show();
                         this.Close();
@@ -52,7 +66,8 @@ namespace Asset_Managment
                 }
                 else//failure to login
                 {
-                    MessageBox.Show("System Name doesnt exist", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    connect.Close();
+                    MessageBox.Show("Hardware Id doesnt exist", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
         }   

@@ -88,6 +88,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Link.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Link.Designer.cs">
+      <DependentUpon>Link.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,6 +135,21 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>mssql2001975DataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="mssql2001975DataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>mssql2001975DataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="mssql2001975DataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>mssql2001975DataSet7.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="mssql2001975DataSet8.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>mssql2001975DataSet8.xsd</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -177,6 +198,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Link.resx">
+      <DependentUpon>Link.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -271,6 +295,39 @@
     </None>
     <None Include="mssql2001975DataSet5.xss">
       <DependentUpon>mssql2001975DataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="mssql2001975DataSet6.xsc">
+      <DependentUpon>mssql2001975DataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="mssql2001975DataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>mssql2001975DataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="mssql2001975DataSet6.xss">
+      <DependentUpon>mssql2001975DataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="mssql2001975DataSet7.xsc">
+      <DependentUpon>mssql2001975DataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="mssql2001975DataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>mssql2001975DataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="mssql2001975DataSet7.xss">
+      <DependentUpon>mssql2001975DataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="mssql2001975DataSet8.xsc">
+      <DependentUpon>mssql2001975DataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="mssql2001975DataSet8.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>mssql2001975DataSet8.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="mssql2001975DataSet8.xss">
+      <DependentUpon>mssql2001975DataSet8.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

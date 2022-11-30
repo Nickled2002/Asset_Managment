@@ -33,7 +33,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.SystemNameTb = new System.Windows.Forms.TextBox();
+            this.IdTb = new System.Windows.Forms.TextBox();
             this.DltBtn = new System.Windows.Forms.Button();
             this.BackBtn = new System.Windows.Forms.Button();
             this.assetManagerBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -89,17 +89,17 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(12, 353);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(454, 25);
+            this.label2.Size = new System.Drawing.Size(563, 25);
             this.label2.TabIndex = 6;
-            this.label2.Text = "Enter the system name that you would like to delete";
+            this.label2.Text = "Enter the id number of the hardware that you would like to delete";
             // 
-            // SystemNameTb
+            // IdTb
             // 
-            this.SystemNameTb.Location = new System.Drawing.Point(520, 344);
-            this.SystemNameTb.Multiline = true;
-            this.SystemNameTb.Name = "SystemNameTb";
-            this.SystemNameTb.Size = new System.Drawing.Size(268, 33);
-            this.SystemNameTb.TabIndex = 7;
+            this.IdTb.Location = new System.Drawing.Point(625, 345);
+            this.IdTb.Multiline = true;
+            this.IdTb.Name = "IdTb";
+            this.IdTb.Size = new System.Drawing.Size(163, 33);
+            this.IdTb.TabIndex = 7;
             // 
             // DltBtn
             // 
@@ -239,7 +239,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.BackBtn);
             this.Controls.Add(this.DltBtn);
-            this.Controls.Add(this.SystemNameTb);
+            this.Controls.Add(this.IdTb);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -262,7 +262,7 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox SystemNameTb;
+        private System.Windows.Forms.TextBox IdTb;
         private System.Windows.Forms.Button DltBtn;
         private System.Windows.Forms.Button BackBtn;
         private System.Windows.Forms.BindingSource assetManagerBindingSource;

@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -27,39 +28,53 @@ namespace Asset_Managment
 
         private void DltBtn_Click(object sender, EventArgs e)
         {
-            if (SystemNameTb.Text == "")
+            if (IdTb.Text == "")
             {
-                MessageBox.Show("Operation System Name is missing", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Software Id is missing", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
-                string osName = SystemNameTb.Text;
+                string sId = IdTb.Text;
                 SqlConnection connect;
                 connect = new SqlConnection(Tools.ConCreds);// Connect to database using credentials
                 SqlDataAdapter addcomm = new SqlDataAdapter();
                 //connecting to database and
-                String select = "SELECT * FROM Asset_Manager  WHERE System_Name = @opersystemnamE";// searching for in the Username and password fields for
+                String select = "SELECT * FROM Asset_Manager_Software  WHERE Software_Id = @systemId ";// searching for in the Username and password fields for
                 SqlCommand command = new SqlCommand(select, connect);
-                command.Parameters.AddWithValue("@opersystemnamE", osName);
+                command.Parameters.AddWithValue("@systemId", sId);
                 connect.Open();//connection opened
                 SqlDataReader delfind = command.ExecuteReader();
                 if (delfind.HasRows)
                 {
-                    DialogResult YesOrNo = MessageBox.Show("Are you sure you want to delete system: " + osName, "Found", MessageBoxButtons.YesNo);
+                    DialogResult YesOrNo = MessageBox.Show("Are you sure you want to delete system: " + sId, "Found", MessageBoxButtons.YesNo);
                     if (YesOrNo == DialogResult.Yes)
                     {
+                        connect.Close();
                         //do something to be implemented
+                        SqlConnection connect1;
+                        connect1 = new SqlConnection(Tools.ConCreds);
+                        String Delsel = "DELETE FROM Asset_Manager_Software WHERE Software_Id = @systemId ";
+                        SqlCommand commandDlt = new SqlCommand(Delsel, connect1);
+                        commandDlt.Parameters.AddWithValue("@systemId", sId);
+                        connect1.Open();//connection opened
+                        commandDlt.ExecuteNonQuery();
+                        connect1.Close();
+                        var Main = new SoftwareMain();//main form loaded this form closed
+                        Main.Show();
+                        this.Close();
                     }
                     else if (YesOrNo == DialogResult.No)
                     {
-                        var Main = new Form1();//main form loaded this form closed
+                        connect.Close();
+                        var Main = new SoftwareMain();//main form loaded this form closed
                         Main.Show();
                         this.Close();
                     }
                 }
                 else//failure to login
                 {
-                    MessageBox.Show("System Name doesnt exist", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    connect.Close();
+                    MessageBox.Show("Software Id doesnt exist", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
         }

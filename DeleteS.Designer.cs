@@ -35,7 +35,7 @@
             this.assetManagerSoftwareBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.BackBtn = new System.Windows.Forms.Button();
             this.DltBtn = new System.Windows.Forms.Button();
-            this.SystemNameTb = new System.Windows.Forms.TextBox();
+            this.IdTb = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.assetManagerSoftwareBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -99,13 +99,13 @@
             this.DltBtn.UseVisualStyleBackColor = true;
             this.DltBtn.Click += new System.EventHandler(this.DltBtn_Click);
             // 
-            // SystemNameTb
+            // IdTb
             // 
-            this.SystemNameTb.Location = new System.Drawing.Point(520, 348);
-            this.SystemNameTb.Multiline = true;
-            this.SystemNameTb.Name = "SystemNameTb";
-            this.SystemNameTb.Size = new System.Drawing.Size(268, 33);
-            this.SystemNameTb.TabIndex = 11;
+            this.IdTb.Location = new System.Drawing.Point(564, 348);
+            this.IdTb.Multiline = true;
+            this.IdTb.Name = "IdTb";
+            this.IdTb.Size = new System.Drawing.Size(224, 33);
+            this.IdTb.TabIndex = 11;
             // 
             // label1
             // 
@@ -113,9 +113,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(6, 359);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(443, 20);
+            this.label1.Size = new System.Drawing.Size(462, 20);
             this.label1.TabIndex = 10;
-            this.label1.Text = "Enter the operating system name that you would like to delete";
+            this.label1.Text = "Enter the Id of the operating system that you would like to delete";
             // 
             // dataGridView1
             // 
@@ -195,7 +195,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.BackBtn);
             this.Controls.Add(this.DltBtn);
-            this.Controls.Add(this.SystemNameTb);
+            this.Controls.Add(this.IdTb);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -220,7 +220,7 @@
         private System.Windows.Forms.BindingSource assetManagerSoftwareBindingSource;
         private System.Windows.Forms.Button BackBtn;
         private System.Windows.Forms.Button DltBtn;
-        private System.Windows.Forms.TextBox SystemNameTb;
+        private System.Windows.Forms.TextBox IdTb;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.BindingSource assetManagerSoftwareBindingSource1;
         private System.Windows.Forms.DataGridView dataGridView1;
