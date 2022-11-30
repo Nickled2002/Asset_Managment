@@ -21,7 +21,6 @@ namespace Asset_Managment
         {
             // TODO: This line of code loads data into the 'mssql2001975DataSet5.Asset_Manager_Software' table. You can move, or remove it, as needed.
             this.asset_Manager_SoftwareTableAdapter.Fill(this.mssql2001975DataSet5.Asset_Manager_Software);
-
         }
 
         private void FinishBtn_Click(object sender, EventArgs e)

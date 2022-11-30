@@ -30,17 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.systemNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.modelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.manufacturerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.typeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iPAddressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.purchaseDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.noteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.assetManagerBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.mssql2001975DataSet = new Asset_Managment.mssql2001975DataSet();
-            this.asset_ManagerTableAdapter = new Asset_Managment.mssql2001975DataSetTableAdapters.Asset_ManagerTableAdapter();
             this.Add_Btn = new System.Windows.Forms.Button();
             this.Edit_Btn = new System.Windows.Forms.Button();
             this.Dlt_Btn = new System.Windows.Forms.Button();
@@ -48,111 +38,26 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.BackBtn = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.assetManagerHardwareBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.mssql2001975DataSet1 = new Asset_Managment.mssql2001975DataSet1();
+            this.assetManagerHardwareBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.asset_Manager_HardwareTableAdapter = new Asset_Managment.mssql2001975DataSet1TableAdapters.Asset_Manager_HardwareTableAdapter();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.hardwareIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.systemNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.modelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.manufacturerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.typeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iPAddressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.purchaseDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.noteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.assetManagerBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mssql2001975DataSet)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.assetManagerHardwareBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mssql2001975DataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.assetManagerHardwareBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.systemNameDataGridViewTextBoxColumn,
-            this.modelDataGridViewTextBoxColumn,
-            this.manufacturerDataGridViewTextBoxColumn,
-            this.typeDataGridViewTextBoxColumn,
-            this.iPAddressDataGridViewTextBoxColumn,
-            this.purchaseDateDataGridViewTextBoxColumn,
-            this.noteDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.assetManagerBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(1, 84);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(926, 305);
-            this.dataGridView1.TabIndex = 3;
-            // 
-            // systemNameDataGridViewTextBoxColumn
-            // 
-            this.systemNameDataGridViewTextBoxColumn.DataPropertyName = "System_Name";
-            this.systemNameDataGridViewTextBoxColumn.HeaderText = "System_Name";
-            this.systemNameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.systemNameDataGridViewTextBoxColumn.Name = "systemNameDataGridViewTextBoxColumn";
-            this.systemNameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.systemNameDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // modelDataGridViewTextBoxColumn
-            // 
-            this.modelDataGridViewTextBoxColumn.DataPropertyName = "Model";
-            this.modelDataGridViewTextBoxColumn.HeaderText = "Model";
-            this.modelDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.modelDataGridViewTextBoxColumn.Name = "modelDataGridViewTextBoxColumn";
-            this.modelDataGridViewTextBoxColumn.ReadOnly = true;
-            this.modelDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // manufacturerDataGridViewTextBoxColumn
-            // 
-            this.manufacturerDataGridViewTextBoxColumn.DataPropertyName = "Manufacturer";
-            this.manufacturerDataGridViewTextBoxColumn.HeaderText = "Manufacturer";
-            this.manufacturerDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.manufacturerDataGridViewTextBoxColumn.Name = "manufacturerDataGridViewTextBoxColumn";
-            this.manufacturerDataGridViewTextBoxColumn.ReadOnly = true;
-            this.manufacturerDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // typeDataGridViewTextBoxColumn
-            // 
-            this.typeDataGridViewTextBoxColumn.DataPropertyName = "Type";
-            this.typeDataGridViewTextBoxColumn.HeaderText = "Type";
-            this.typeDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.typeDataGridViewTextBoxColumn.Name = "typeDataGridViewTextBoxColumn";
-            this.typeDataGridViewTextBoxColumn.ReadOnly = true;
-            this.typeDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // iPAddressDataGridViewTextBoxColumn
-            // 
-            this.iPAddressDataGridViewTextBoxColumn.DataPropertyName = "IP_Address";
-            this.iPAddressDataGridViewTextBoxColumn.HeaderText = "IP_Address";
-            this.iPAddressDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.iPAddressDataGridViewTextBoxColumn.Name = "iPAddressDataGridViewTextBoxColumn";
-            this.iPAddressDataGridViewTextBoxColumn.ReadOnly = true;
-            this.iPAddressDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // purchaseDateDataGridViewTextBoxColumn
-            // 
-            this.purchaseDateDataGridViewTextBoxColumn.DataPropertyName = "Purchase_Date";
-            this.purchaseDateDataGridViewTextBoxColumn.HeaderText = "Purchase_Date";
-            this.purchaseDateDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.purchaseDateDataGridViewTextBoxColumn.Name = "purchaseDateDataGridViewTextBoxColumn";
-            this.purchaseDateDataGridViewTextBoxColumn.ReadOnly = true;
-            this.purchaseDateDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // noteDataGridViewTextBoxColumn
-            // 
-            this.noteDataGridViewTextBoxColumn.DataPropertyName = "Note";
-            this.noteDataGridViewTextBoxColumn.HeaderText = "Note";
-            this.noteDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.noteDataGridViewTextBoxColumn.Name = "noteDataGridViewTextBoxColumn";
-            this.noteDataGridViewTextBoxColumn.ReadOnly = true;
-            this.noteDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // assetManagerBindingSource
-            // 
-            this.assetManagerBindingSource.DataMember = "Asset_Manager";
-            this.assetManagerBindingSource.DataSource = this.mssql2001975DataSet;
-            // 
-            // mssql2001975DataSet
-            // 
-            this.mssql2001975DataSet.DataSetName = "mssql2001975DataSet";
-            this.mssql2001975DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // asset_ManagerTableAdapter
-            // 
-            this.asset_ManagerTableAdapter.ClearBeforeFill = true;
             // 
             // Add_Btn
             // 
@@ -229,42 +134,144 @@
             this.BackBtn.UseVisualStyleBackColor = true;
             this.BackBtn.Click += new System.EventHandler(this.BackBtn_Click);
             // 
+            // mssql2001975DataSet1
+            // 
+            this.mssql2001975DataSet1.DataSetName = "mssql2001975DataSet1";
+            this.mssql2001975DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // assetManagerHardwareBindingSource1
+            // 
+            this.assetManagerHardwareBindingSource1.DataMember = "Asset_Manager_Hardware";
+            this.assetManagerHardwareBindingSource1.DataSource = this.mssql2001975DataSet1;
+            // 
+            // asset_Manager_HardwareTableAdapter
+            // 
+            this.asset_Manager_HardwareTableAdapter.ClearBeforeFill = true;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.hardwareIdDataGridViewTextBoxColumn,
+            this.systemNameDataGridViewTextBoxColumn,
+            this.modelDataGridViewTextBoxColumn,
+            this.manufacturerDataGridViewTextBoxColumn,
+            this.typeDataGridViewTextBoxColumn,
+            this.iPAddressDataGridViewTextBoxColumn,
+            this.purchaseDateDataGridViewTextBoxColumn,
+            this.noteDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.assetManagerHardwareBindingSource1;
+            this.dataGridView1.Location = new System.Drawing.Point(1, 89);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(926, 300);
+            this.dataGridView1.TabIndex = 9;
+            // 
+            // hardwareIdDataGridViewTextBoxColumn
+            // 
+            this.hardwareIdDataGridViewTextBoxColumn.DataPropertyName = "Hardware_Id";
+            this.hardwareIdDataGridViewTextBoxColumn.HeaderText = "Hardware_Id";
+            this.hardwareIdDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.hardwareIdDataGridViewTextBoxColumn.Name = "hardwareIdDataGridViewTextBoxColumn";
+            this.hardwareIdDataGridViewTextBoxColumn.ReadOnly = true;
+            this.hardwareIdDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // systemNameDataGridViewTextBoxColumn
+            // 
+            this.systemNameDataGridViewTextBoxColumn.DataPropertyName = "System_Name";
+            this.systemNameDataGridViewTextBoxColumn.HeaderText = "System_Name";
+            this.systemNameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.systemNameDataGridViewTextBoxColumn.Name = "systemNameDataGridViewTextBoxColumn";
+            this.systemNameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.systemNameDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // modelDataGridViewTextBoxColumn
+            // 
+            this.modelDataGridViewTextBoxColumn.DataPropertyName = "Model";
+            this.modelDataGridViewTextBoxColumn.HeaderText = "Model";
+            this.modelDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.modelDataGridViewTextBoxColumn.Name = "modelDataGridViewTextBoxColumn";
+            this.modelDataGridViewTextBoxColumn.ReadOnly = true;
+            this.modelDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // manufacturerDataGridViewTextBoxColumn
+            // 
+            this.manufacturerDataGridViewTextBoxColumn.DataPropertyName = "Manufacturer";
+            this.manufacturerDataGridViewTextBoxColumn.HeaderText = "Manufacturer";
+            this.manufacturerDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.manufacturerDataGridViewTextBoxColumn.Name = "manufacturerDataGridViewTextBoxColumn";
+            this.manufacturerDataGridViewTextBoxColumn.ReadOnly = true;
+            this.manufacturerDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // typeDataGridViewTextBoxColumn
+            // 
+            this.typeDataGridViewTextBoxColumn.DataPropertyName = "Type";
+            this.typeDataGridViewTextBoxColumn.HeaderText = "Type";
+            this.typeDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.typeDataGridViewTextBoxColumn.Name = "typeDataGridViewTextBoxColumn";
+            this.typeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.typeDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // iPAddressDataGridViewTextBoxColumn
+            // 
+            this.iPAddressDataGridViewTextBoxColumn.DataPropertyName = "IP_Address";
+            this.iPAddressDataGridViewTextBoxColumn.HeaderText = "IP_Address";
+            this.iPAddressDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.iPAddressDataGridViewTextBoxColumn.Name = "iPAddressDataGridViewTextBoxColumn";
+            this.iPAddressDataGridViewTextBoxColumn.ReadOnly = true;
+            this.iPAddressDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // purchaseDateDataGridViewTextBoxColumn
+            // 
+            this.purchaseDateDataGridViewTextBoxColumn.DataPropertyName = "Purchase_Date";
+            this.purchaseDateDataGridViewTextBoxColumn.HeaderText = "Purchase_Date";
+            this.purchaseDateDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.purchaseDateDataGridViewTextBoxColumn.Name = "purchaseDateDataGridViewTextBoxColumn";
+            this.purchaseDateDataGridViewTextBoxColumn.ReadOnly = true;
+            this.purchaseDateDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // noteDataGridViewTextBoxColumn
+            // 
+            this.noteDataGridViewTextBoxColumn.DataPropertyName = "Note";
+            this.noteDataGridViewTextBoxColumn.HeaderText = "Note";
+            this.noteDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.noteDataGridViewTextBoxColumn.Name = "noteDataGridViewTextBoxColumn";
+            this.noteDataGridViewTextBoxColumn.ReadOnly = true;
+            this.noteDataGridViewTextBoxColumn.Width = 125;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(926, 450);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.BackBtn);
             this.Controls.Add(this.This_Btn);
             this.Controls.Add(this.Dlt_Btn);
             this.Controls.Add(this.Edit_Btn);
             this.Controls.Add(this.Add_Btn);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "Hardware Asset Manager";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.assetManagerBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mssql2001975DataSet)).EndInit();
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.assetManagerHardwareBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mssql2001975DataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.assetManagerHardwareBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private mssql2001975DataSet mssql2001975DataSet;
         private System.Windows.Forms.BindingSource assetManagerBindingSource;
-        private mssql2001975DataSetTableAdapters.Asset_ManagerTableAdapter asset_ManagerTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn systemNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn modelDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn manufacturerDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn typeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iPAddressDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn purchaseDateDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn noteDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button Add_Btn;
         private System.Windows.Forms.Button Edit_Btn;
         private System.Windows.Forms.Button Dlt_Btn;
@@ -272,6 +279,19 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button BackBtn;
+        private System.Windows.Forms.BindingSource assetManagerHardwareBindingSource;
+        private mssql2001975DataSet1 mssql2001975DataSet1;
+        private System.Windows.Forms.BindingSource assetManagerHardwareBindingSource1;
+        private mssql2001975DataSet1TableAdapters.Asset_Manager_HardwareTableAdapter asset_Manager_HardwareTableAdapter;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn hardwareIdDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn systemNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn modelDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn manufacturerDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn typeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iPAddressDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn purchaseDateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn noteDataGridViewTextBoxColumn;
     }
 }
 

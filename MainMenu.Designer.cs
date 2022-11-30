@@ -32,6 +32,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.SnHBtn = new System.Windows.Forms.Button();
             this.VulnSrchBtn = new System.Windows.Forms.Button();
             this.SoftDbBtn = new System.Windows.Forms.Button();
             this.HardDbBtn = new System.Windows.Forms.Button();
@@ -62,6 +63,7 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.groupBox1.Controls.Add(this.SnHBtn);
             this.groupBox1.Controls.Add(this.VulnSrchBtn);
             this.groupBox1.Controls.Add(this.SoftDbBtn);
             this.groupBox1.Controls.Add(this.HardDbBtn);
@@ -72,11 +74,21 @@
             this.groupBox1.Size = new System.Drawing.Size(730, 266);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "G";
+            // 
+            // SnHBtn
+            // 
+            this.SnHBtn.Location = new System.Drawing.Point(5, 141);
+            this.SnHBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.SnHBtn.Name = "SnHBtn";
+            this.SnHBtn.Size = new System.Drawing.Size(163, 55);
+            this.SnHBtn.TabIndex = 3;
+            this.SnHBtn.Text = "Software in Hardware Datebase";
+            this.SnHBtn.UseVisualStyleBackColor = true;
+            this.SnHBtn.Click += new System.EventHandler(this.SnHBtn_Click);
             // 
             // VulnSrchBtn
             // 
-            this.VulnSrchBtn.Location = new System.Drawing.Point(5, 143);
+            this.VulnSrchBtn.Location = new System.Drawing.Point(5, 200);
             this.VulnSrchBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.VulnSrchBtn.Name = "VulnSrchBtn";
             this.VulnSrchBtn.Size = new System.Drawing.Size(163, 55);
@@ -103,7 +115,7 @@
             this.HardDbBtn.Name = "HardDbBtn";
             this.HardDbBtn.Size = new System.Drawing.Size(163, 55);
             this.HardDbBtn.TabIndex = 0;
-            this.HardDbBtn.Text = "Hardware Databse";
+            this.HardDbBtn.Text = "Hardware Database";
             this.HardDbBtn.UseVisualStyleBackColor = true;
             this.HardDbBtn.Click += new System.EventHandler(this.HardDbBtn_Click);
             // 
@@ -134,5 +146,6 @@
         private System.Windows.Forms.Button VulnSrchBtn;
         private System.Windows.Forms.Button SoftDbBtn;
         private System.Windows.Forms.Button HardDbBtn;
+        private System.Windows.Forms.Button SnHBtn;
     }
 }

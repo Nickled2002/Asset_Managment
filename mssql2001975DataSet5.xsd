@@ -22,13 +22,14 @@
                 </InsertCommand>
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT Operating_System_Name, Version, Manufacturer FROM dbo.Asset_Manager_Software</CommandText>
+                    <CommandText>SELECT Software_Id, Operating_System_Name, Version, Manufacturer FROM dbo.Asset_Manager_Software</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
             </MainSource>
             <Mappings>
+              <Mapping SourceColumn="Software_Id" DataSetColumn="Software_Id" />
               <Mapping SourceColumn="Operating_System_Name" DataSetColumn="Operating_System_Name" />
               <Mapping SourceColumn="Version" DataSetColumn="Version" />
               <Mapping SourceColumn="Manufacturer" DataSetColumn="Manufacturer" />
@@ -46,6 +47,7 @@
         <xs:element name="Asset_Manager_Software" msprop:Generator_RowEvHandlerName="Asset_Manager_SoftwareRowChangeEventHandler" msprop:Generator_RowDeletedName="Asset_Manager_SoftwareRowDeleted" msprop:Generator_RowDeletingName="Asset_Manager_SoftwareRowDeleting" msprop:Generator_RowEvArgName="Asset_Manager_SoftwareRowChangeEvent" msprop:Generator_TablePropName="Asset_Manager_Software" msprop:Generator_RowChangedName="Asset_Manager_SoftwareRowChanged" msprop:Generator_RowChangingName="Asset_Manager_SoftwareRowChanging" msprop:Generator_TableClassName="Asset_Manager_SoftwareDataTable" msprop:Generator_RowClassName="Asset_Manager_SoftwareRow" msprop:Generator_TableVarName="tableAsset_Manager_Software" msprop:Generator_UserTableName="Asset_Manager_Software">
           <xs:complexType>
             <xs:sequence>
+              <xs:element name="Software_Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInRow="Software_Id" msprop:Generator_ColumnPropNameInTable="Software_IdColumn" msprop:Generator_ColumnVarNameInTable="columnSoftware_Id" msprop:Generator_UserColumnName="Software_Id" type="xs:int" />
               <xs:element name="Operating_System_Name" msprop:Generator_ColumnPropNameInRow="Operating_System_Name" msprop:Generator_ColumnPropNameInTable="Operating_System_NameColumn" msprop:Generator_ColumnVarNameInTable="columnOperating_System_Name" msprop:Generator_UserColumnName="Operating_System_Name" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -56,14 +58,14 @@
               <xs:element name="Version" msprop:Generator_ColumnPropNameInRow="Version" msprop:Generator_ColumnPropNameInTable="VersionColumn" msprop:Generator_ColumnVarNameInTable="columnVersion" msprop:Generator_UserColumnName="Version" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
-                    <xs:maxLength value="10" />
+                    <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
               <xs:element name="Manufacturer" msprop:Generator_ColumnPropNameInRow="Manufacturer" msprop:Generator_ColumnPropNameInTable="ManufacturerColumn" msprop:Generator_ColumnVarNameInTable="columnManufacturer" msprop:Generator_UserColumnName="Manufacturer" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
-                    <xs:maxLength value="30" />
+                    <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>

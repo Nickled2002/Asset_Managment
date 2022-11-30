@@ -279,6 +279,8 @@ namespace Asset_Managment {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class Asset_Manager_SoftwareDataTable : global::System.Data.TypedTableBase<Asset_Manager_SoftwareRow> {
             
+            private global::System.Data.DataColumn columnSoftware_Id;
+            
             private global::System.Data.DataColumn columnOperating_System_Name;
             
             private global::System.Data.DataColumn columnVersion;
@@ -316,6 +318,14 @@ namespace Asset_Managment {
             protected Asset_Manager_SoftwareDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Software_IdColumn {
+                get {
+                    return this.columnSoftware_Id;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -382,6 +392,7 @@ namespace Asset_Managment {
             public Asset_Manager_SoftwareRow AddAsset_Manager_SoftwareRow(string Operating_System_Name, string Version, string Manufacturer) {
                 Asset_Manager_SoftwareRow rowAsset_Manager_SoftwareRow = ((Asset_Manager_SoftwareRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
+                        null,
                         Operating_System_Name,
                         Version,
                         Manufacturer};
@@ -407,6 +418,7 @@ namespace Asset_Managment {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
+                this.columnSoftware_Id = base.Columns["Software_Id"];
                 this.columnOperating_System_Name = base.Columns["Operating_System_Name"];
                 this.columnVersion = base.Columns["Version"];
                 this.columnManufacturer = base.Columns["Manufacturer"];
@@ -415,15 +427,22 @@ namespace Asset_Managment {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             private void InitClass() {
+                this.columnSoftware_Id = new global::System.Data.DataColumn("Software_Id", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSoftware_Id);
                 this.columnOperating_System_Name = new global::System.Data.DataColumn("Operating_System_Name", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnOperating_System_Name);
                 this.columnVersion = new global::System.Data.DataColumn("Version", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnVersion);
                 this.columnManufacturer = new global::System.Data.DataColumn("Manufacturer", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnManufacturer);
+                this.columnSoftware_Id.AutoIncrement = true;
+                this.columnSoftware_Id.AutoIncrementSeed = -1;
+                this.columnSoftware_Id.AutoIncrementStep = -1;
+                this.columnSoftware_Id.AllowDBNull = false;
+                this.columnSoftware_Id.ReadOnly = true;
                 this.columnOperating_System_Name.MaxLength = 50;
-                this.columnVersion.MaxLength = 10;
-                this.columnManufacturer.MaxLength = 30;
+                this.columnVersion.MaxLength = 50;
+                this.columnManufacturer.MaxLength = 50;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -562,6 +581,17 @@ namespace Asset_Managment {
             internal Asset_Manager_SoftwareRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
                 this.tableAsset_Manager_Software = ((Asset_Manager_SoftwareDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int Software_Id {
+                get {
+                    return ((int)(this[this.tableAsset_Manager_Software.Software_IdColumn]));
+                }
+                set {
+                    this[this.tableAsset_Manager_Software.Software_IdColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -809,6 +839,7 @@ namespace Asset_Managment.mssql2001975DataSet5TableAdapters {
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "Asset_Manager_Software";
+            tableMapping.ColumnMappings.Add("Software_Id", "Software_Id");
             tableMapping.ColumnMappings.Add("Operating_System_Name", "Operating_System_Name");
             tableMapping.ColumnMappings.Add("Version", "Version");
             tableMapping.ColumnMappings.Add("Manufacturer", "Manufacturer");
@@ -836,8 +867,8 @@ namespace Asset_Managment.mssql2001975DataSet5TableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT Operating_System_Name, Version, Manufacturer FROM dbo.Asset_Manager_Softwa" +
-                "re";
+            this._commandCollection[0].CommandText = "SELECT Software_Id, Operating_System_Name, Version, Manufacturer FROM dbo.Asset_M" +
+                "anager_Software";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         

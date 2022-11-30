@@ -63,6 +63,24 @@ namespace Asset_Managment
                             }
                             else
                             {
+                                if ((String.IsNullOrEmpty(DayTB.Text)) && (String.IsNullOrEmpty(MonthTB.Text)) && (String.IsNullOrEmpty(YearTB.Text)))
+                                {//all mandatory fields completed 
+                                    connect.Open();
+                                    SqlCommand command;
+                                    SqlDataAdapter addcomm = new SqlDataAdapter();
+                                    String Addition = "";//inserting and connecting to database
+                                    Addition = "Insert into Asset_Manager_Hardware (System_Name,Model,Manufacturer,Type,IP_Address,Purchase_Date,Note) values('" + SystemName + "','" + Model + "','" + Manufacturer + "','" + Type + "','" + IPAddress + "','null','" + Note + "')";
+                                    command = new SqlCommand(Addition, connect);
+                                    addcomm.InsertCommand = new SqlCommand(Addition, connect);
+                                    addcomm.InsertCommand.ExecuteNonQuery();
+                                    command.Dispose();
+                                    connect.Close();
+                                    var Main = new Form1();//main form loaded this form closed
+                                    MessageBox.Show("Asset added sucessfully", "Add Asset", MessageBoxButtons.OK, MessageBoxIcon.Information);// show message of success
+                                    Main.Show();
+                                    this.Close();
+
+                                }
                                 if ((!String.IsNullOrEmpty(DayTB.Text)) || (!String.IsNullOrEmpty(MonthTB.Text)) || (!String.IsNullOrEmpty(YearTB.Text)))
                                 {
                                     if (String.IsNullOrEmpty(DayTB.Text))
@@ -83,7 +101,7 @@ namespace Asset_Managment
                                         SqlCommand command;
                                         SqlDataAdapter addcomm = new SqlDataAdapter();
                                         String Addition = "";//connecting to database and inserting values
-                                        Addition = "Insert into Asset_Manager (System_Name,Model,Manufacturer,Type,IP_Address,Purchase_Date,Note) values('" + SystemName + "','" + Model + "','" + Manufacturer + "','" + Type + "','" + IPAddress + "','" + Date + "','" + Note + "')";
+                                        Addition = "Insert into Asset_Manager_Hardware (System_Name,Model,Manufacturer,Type,IP_Address,Purchase_Date,Note) values('" + SystemName + "','" + Model + "','" + Manufacturer + "','" + Type + "','" + IPAddress + "','" + Date + "','" + Note + "')";
                                         command = new SqlCommand(Addition, connect);
                                         addcomm.InsertCommand = new SqlCommand(Addition, connect);
                                         addcomm.InsertCommand.ExecuteNonQuery();
@@ -93,31 +111,6 @@ namespace Asset_Managment
                                         MessageBox.Show("Asset added sucessfully", "Add Asset", MessageBoxButtons.OK, MessageBoxIcon.Information);// show message of success
                                         Main.Show();
                                         this.Close();
-                                    }
-                                    else
-                                    {
-                                        if ((String.IsNullOrEmpty(DayTB.Text)) && (String.IsNullOrEmpty(MonthTB.Text)) && (String.IsNullOrEmpty(YearTB.Text)))
-                                        {//all mandatory fields completed 
-                                            connect.Open();
-                                            SqlCommand command;
-                                            SqlDataAdapter addcomm = new SqlDataAdapter();
-                                            String Addition = "";//inserting and connecting to database
-                                            Addition = "Insert into Asset_Manager (System_Name,Model,Manufacturer,Type,IP_Address,Purchase_Date,Note) values('" + SystemName + "','" + Model + "','" + Manufacturer + "','" + Type + "','" + IPAddress + "','null','" + Note + "')";
-                                            command = new SqlCommand(Addition, connect);
-                                            addcomm.InsertCommand = new SqlCommand(Addition, connect);
-                                            addcomm.InsertCommand.ExecuteNonQuery();
-                                            command.Dispose();
-                                            connect.Close();
-                                            var Main = new Form1();//main form loaded this form closed
-                                            MessageBox.Show("Asset added sucessfully", "Add Asset", MessageBoxButtons.OK, MessageBoxIcon.Information);// show message of success
-                                            Main.Show();
-                                            this.Close();
-
-                                        }
-                                        else
-                                        {
-
-                                        }
                                     }
                                 }
                             }

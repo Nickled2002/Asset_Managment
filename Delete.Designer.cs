@@ -32,15 +32,17 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Delete));
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.mssql2001975DataSet = new Asset_Managment.mssql2001975DataSet();
             this.label2 = new System.Windows.Forms.Label();
             this.SystemNameTb = new System.Windows.Forms.TextBox();
             this.DltBtn = new System.Windows.Forms.Button();
             this.BackBtn = new System.Windows.Forms.Button();
+            this.assetManagerBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.assetManagerHardwareBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.mssql2001975DataSet2 = new Asset_Managment.mssql2001975DataSet2();
-            this.assetManagerBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.asset_ManagerTableAdapter = new Asset_Managment.mssql2001975DataSet2TableAdapters.Asset_ManagerTableAdapter();
+            this.assetManagerHardwareBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.asset_Manager_HardwareTableAdapter = new Asset_Managment.mssql2001975DataSet2TableAdapters.Asset_Manager_HardwareTableAdapter();
+            this.hardwareIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.systemNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.modelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.manufacturerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,10 +51,11 @@
             this.purchaseDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.noteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.mssql2001975DataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.assetManagerBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.assetManagerHardwareBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mssql2001975DataSet2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.assetManagerBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.assetManagerHardwareBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -79,11 +82,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "ScottishGlen Hardware Assets";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // mssql2001975DataSet
-            // 
-            this.mssql2001975DataSet.DataSetName = "mssql2001975DataSet";
-            this.mssql2001975DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label2
             // 
@@ -130,6 +128,7 @@
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.hardwareIdDataGridViewTextBoxColumn,
             this.systemNameDataGridViewTextBoxColumn,
             this.modelDataGridViewTextBoxColumn,
             this.manufacturerDataGridViewTextBoxColumn,
@@ -137,13 +136,13 @@
             this.iPAddressDataGridViewTextBoxColumn,
             this.purchaseDateDataGridViewTextBoxColumn,
             this.noteDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.assetManagerBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(2, 89);
+            this.dataGridView1.DataSource = this.assetManagerHardwareBindingSource1;
+            this.dataGridView1.Location = new System.Drawing.Point(2, 90);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(801, 249);
+            this.dataGridView1.Size = new System.Drawing.Size(801, 248);
             this.dataGridView1.TabIndex = 10;
             // 
             // mssql2001975DataSet2
@@ -151,14 +150,23 @@
             this.mssql2001975DataSet2.DataSetName = "mssql2001975DataSet2";
             this.mssql2001975DataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // assetManagerBindingSource
+            // assetManagerHardwareBindingSource1
             // 
-            this.assetManagerBindingSource.DataMember = "Asset_Manager";
-            this.assetManagerBindingSource.DataSource = this.mssql2001975DataSet2;
+            this.assetManagerHardwareBindingSource1.DataMember = "Asset_Manager_Hardware";
+            this.assetManagerHardwareBindingSource1.DataSource = this.mssql2001975DataSet2;
             // 
-            // asset_ManagerTableAdapter
+            // asset_Manager_HardwareTableAdapter
             // 
-            this.asset_ManagerTableAdapter.ClearBeforeFill = true;
+            this.asset_Manager_HardwareTableAdapter.ClearBeforeFill = true;
+            // 
+            // hardwareIdDataGridViewTextBoxColumn
+            // 
+            this.hardwareIdDataGridViewTextBoxColumn.DataPropertyName = "Hardware_Id";
+            this.hardwareIdDataGridViewTextBoxColumn.HeaderText = "Hardware_Id";
+            this.hardwareIdDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.hardwareIdDataGridViewTextBoxColumn.Name = "hardwareIdDataGridViewTextBoxColumn";
+            this.hardwareIdDataGridViewTextBoxColumn.ReadOnly = true;
+            this.hardwareIdDataGridViewTextBoxColumn.Width = 125;
             // 
             // systemNameDataGridViewTextBoxColumn
             // 
@@ -239,10 +247,11 @@
             this.Text = "Delete Item";
             this.Load += new System.EventHandler(this.Delete_Load);
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.mssql2001975DataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.assetManagerBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.assetManagerHardwareBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mssql2001975DataSet2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.assetManagerBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.assetManagerHardwareBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -252,15 +261,17 @@
 
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
-        private mssql2001975DataSet mssql2001975DataSet;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox SystemNameTb;
         private System.Windows.Forms.Button DltBtn;
         private System.Windows.Forms.Button BackBtn;
+        private System.Windows.Forms.BindingSource assetManagerBindingSource;
+        private System.Windows.Forms.BindingSource assetManagerHardwareBindingSource;
         private System.Windows.Forms.DataGridView dataGridView1;
         private mssql2001975DataSet2 mssql2001975DataSet2;
-        private System.Windows.Forms.BindingSource assetManagerBindingSource;
-        private mssql2001975DataSet2TableAdapters.Asset_ManagerTableAdapter asset_ManagerTableAdapter;
+        private System.Windows.Forms.BindingSource assetManagerHardwareBindingSource1;
+        private mssql2001975DataSet2TableAdapters.Asset_Manager_HardwareTableAdapter asset_Manager_HardwareTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn hardwareIdDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn systemNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn modelDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn manufacturerDataGridViewTextBoxColumn;

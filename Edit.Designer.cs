@@ -32,10 +32,15 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Edit));
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.mssql2001975DataSet3 = new Asset_Managment.mssql2001975DataSet3();
             this.assetManagerBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.asset_ManagerTableAdapter = new Asset_Managment.mssql2001975DataSet3TableAdapters.Asset_ManagerTableAdapter();
+            this.label2 = new System.Windows.Forms.Label();
+            this.FinishBtn = new System.Windows.Forms.Button();
+            this.assetManagerHardwareBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.mssql2001975DataSet4 = new Asset_Managment.mssql2001975DataSet4();
+            this.assetManagerHardwareBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.asset_Manager_HardwareTableAdapter = new Asset_Managment.mssql2001975DataSet4TableAdapters.Asset_Manager_HardwareTableAdapter();
+            this.hardwareIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.systemNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.modelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.manufacturerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,12 +48,12 @@
             this.iPAddressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.purchaseDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.noteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label2 = new System.Windows.Forms.Label();
-            this.FinishBtn = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mssql2001975DataSet3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.assetManagerBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.assetManagerHardwareBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mssql2001975DataSet4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.assetManagerHardwareBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -76,6 +81,26 @@
             this.label1.Text = "ScottishGlen Hardware Assets";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(6, 94);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(625, 24);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "To edit a field click on the field you want to edit and complete the changes";
+            // 
+            // FinishBtn
+            // 
+            this.FinishBtn.Location = new System.Drawing.Point(299, 374);
+            this.FinishBtn.Name = "FinishBtn";
+            this.FinishBtn.Size = new System.Drawing.Size(237, 63);
+            this.FinishBtn.TabIndex = 8;
+            this.FinishBtn.Text = "Finish Editing";
+            this.FinishBtn.UseVisualStyleBackColor = true;
+            this.FinishBtn.Click += new System.EventHandler(this.FinishBtn_Click);
+            // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
@@ -83,6 +108,7 @@
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.hardwareIdDataGridViewTextBoxColumn,
             this.systemNameDataGridViewTextBoxColumn,
             this.modelDataGridViewTextBoxColumn,
             this.manufacturerDataGridViewTextBoxColumn,
@@ -90,27 +116,36 @@
             this.iPAddressDataGridViewTextBoxColumn,
             this.purchaseDateDataGridViewTextBoxColumn,
             this.noteDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.assetManagerBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(2, 132);
+            this.dataGridView1.DataSource = this.assetManagerHardwareBindingSource1;
+            this.dataGridView1.Location = new System.Drawing.Point(2, 122);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(801, 236);
-            this.dataGridView1.TabIndex = 6;
+            this.dataGridView1.Size = new System.Drawing.Size(801, 246);
+            this.dataGridView1.TabIndex = 9;
             // 
-            // mssql2001975DataSet3
+            // mssql2001975DataSet4
             // 
-            this.mssql2001975DataSet3.DataSetName = "mssql2001975DataSet3";
-            this.mssql2001975DataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.mssql2001975DataSet4.DataSetName = "mssql2001975DataSet4";
+            this.mssql2001975DataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // assetManagerBindingSource
+            // assetManagerHardwareBindingSource1
             // 
-            this.assetManagerBindingSource.DataMember = "Asset_Manager";
-            this.assetManagerBindingSource.DataSource = this.mssql2001975DataSet3;
+            this.assetManagerHardwareBindingSource1.DataMember = "Asset_Manager_Hardware";
+            this.assetManagerHardwareBindingSource1.DataSource = this.mssql2001975DataSet4;
             // 
-            // asset_ManagerTableAdapter
+            // asset_Manager_HardwareTableAdapter
             // 
-            this.asset_ManagerTableAdapter.ClearBeforeFill = true;
+            this.asset_Manager_HardwareTableAdapter.ClearBeforeFill = true;
+            // 
+            // hardwareIdDataGridViewTextBoxColumn
+            // 
+            this.hardwareIdDataGridViewTextBoxColumn.DataPropertyName = "Hardware_Id";
+            this.hardwareIdDataGridViewTextBoxColumn.HeaderText = "Hardware_Id";
+            this.hardwareIdDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.hardwareIdDataGridViewTextBoxColumn.Name = "hardwareIdDataGridViewTextBoxColumn";
+            this.hardwareIdDataGridViewTextBoxColumn.ReadOnly = true;
+            this.hardwareIdDataGridViewTextBoxColumn.Width = 125;
             // 
             // systemNameDataGridViewTextBoxColumn
             // 
@@ -168,43 +203,25 @@
             this.noteDataGridViewTextBoxColumn.Name = "noteDataGridViewTextBoxColumn";
             this.noteDataGridViewTextBoxColumn.Width = 125;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(6, 94);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(625, 24);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "To edit a field click on the field you want to edit and complete the changes";
-            // 
-            // FinishBtn
-            // 
-            this.FinishBtn.Location = new System.Drawing.Point(299, 374);
-            this.FinishBtn.Name = "FinishBtn";
-            this.FinishBtn.Size = new System.Drawing.Size(237, 63);
-            this.FinishBtn.TabIndex = 8;
-            this.FinishBtn.Text = "Finish Editing";
-            this.FinishBtn.UseVisualStyleBackColor = true;
-            this.FinishBtn.Click += new System.EventHandler(this.FinishBtn_Click);
-            // 
             // Edit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(803, 450);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.FinishBtn);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Edit";
             this.Text = "Edit";
             this.Load += new System.EventHandler(this.Edit_Load);
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mssql2001975DataSet3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.assetManagerBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.assetManagerHardwareBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mssql2001975DataSet4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.assetManagerHardwareBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -214,10 +231,15 @@
 
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private mssql2001975DataSet3 mssql2001975DataSet3;
         private System.Windows.Forms.BindingSource assetManagerBindingSource;
-        private mssql2001975DataSet3TableAdapters.Asset_ManagerTableAdapter asset_ManagerTableAdapter;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button FinishBtn;
+        private System.Windows.Forms.BindingSource assetManagerHardwareBindingSource;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private mssql2001975DataSet4 mssql2001975DataSet4;
+        private System.Windows.Forms.BindingSource assetManagerHardwareBindingSource1;
+        private mssql2001975DataSet4TableAdapters.Asset_Manager_HardwareTableAdapter asset_Manager_HardwareTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn hardwareIdDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn systemNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn modelDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn manufacturerDataGridViewTextBoxColumn;
@@ -225,7 +247,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn iPAddressDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn purchaseDateDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn noteDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button FinishBtn;
     }
 }

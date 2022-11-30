@@ -16,6 +16,9 @@ namespace Asset_Managment
         public ThisMachineS()
         {
             InitializeComponent();
+            OSNameTB.Text = Tools.OSNameDeets;
+            ManuTB.Text = Tools.OSManuDeets;
+            VersionTB.Text = Tools.OSVersionDeets;
         }
 
         private void BackBtn_Click(object sender, EventArgs e)
@@ -23,9 +26,7 @@ namespace Asset_Managment
             SoftwareMain softwareMain = new SoftwareMain(); 
             softwareMain.Show();
             this.Close();
-            OSNameTB.Text = Tools.OSNameDeets;
-            ManuTB.Text = Tools.OSManuDeets;
-            VersionTB.Text = Tools.OSVersionDeets;
+            
         }
 
         private void AddBtn_Click(object sender, EventArgs e)

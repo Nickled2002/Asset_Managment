@@ -19,8 +19,9 @@ namespace Asset_Managment
 
         private void SoftwareMain_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'mssql2001975DataSet4.Asset_Manager_Software' table. You can move, or remove it, as needed.
-            this.asset_Manager_SoftwareTableAdapter1.Fill(this.mssql2001975DataSet4.Asset_Manager_Software);
+            // TODO: This line of code loads data into the 'mssql2001975DataSet.Asset_Manager_Software' table. You can move, or remove it, as needed.
+            this.asset_Manager_SoftwareTableAdapter.Fill(this.mssql2001975DataSet.Asset_Manager_Software);
+
 
         }
 
@@ -51,7 +52,9 @@ namespace Asset_Managment
 
         private void TMSBtn_Click(object sender, EventArgs e)
         {
-
+            ThisMachineS thisMachineS = new ThisMachineS();
+            thisMachineS.Show();
+            this.Close();
         }
 
         private void BackBtn_Click(object sender, EventArgs e)

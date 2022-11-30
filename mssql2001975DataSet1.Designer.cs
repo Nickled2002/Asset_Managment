@@ -24,7 +24,7 @@ namespace Asset_Managment {
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
     public partial class mssql2001975DataSet1 : global::System.Data.DataSet {
         
-        private Asset_Manager_SoftwareDataTable tableAsset_Manager_Software;
+        private Asset_Manager_HardwareDataTable tableAsset_Manager_Hardware;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -54,8 +54,8 @@ namespace Asset_Managment {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["Asset_Manager_Software"] != null)) {
-                    base.Tables.Add(new Asset_Manager_SoftwareDataTable(ds.Tables["Asset_Manager_Software"]));
+                if ((ds.Tables["Asset_Manager_Hardware"] != null)) {
+                    base.Tables.Add(new Asset_Manager_HardwareDataTable(ds.Tables["Asset_Manager_Hardware"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace Asset_Managment {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public Asset_Manager_SoftwareDataTable Asset_Manager_Software {
+        public Asset_Manager_HardwareDataTable Asset_Manager_Hardware {
             get {
-                return this.tableAsset_Manager_Software;
+                return this.tableAsset_Manager_Hardware;
             }
         }
         
@@ -152,8 +152,8 @@ namespace Asset_Managment {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["Asset_Manager_Software"] != null)) {
-                    base.Tables.Add(new Asset_Manager_SoftwareDataTable(ds.Tables["Asset_Manager_Software"]));
+                if ((ds.Tables["Asset_Manager_Hardware"] != null)) {
+                    base.Tables.Add(new Asset_Manager_HardwareDataTable(ds.Tables["Asset_Manager_Hardware"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace Asset_Managment {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableAsset_Manager_Software = ((Asset_Manager_SoftwareDataTable)(base.Tables["Asset_Manager_Software"]));
+            this.tableAsset_Manager_Hardware = ((Asset_Manager_HardwareDataTable)(base.Tables["Asset_Manager_Hardware"]));
             if ((initTable == true)) {
-                if ((this.tableAsset_Manager_Software != null)) {
-                    this.tableAsset_Manager_Software.InitVars();
+                if ((this.tableAsset_Manager_Hardware != null)) {
+                    this.tableAsset_Manager_Hardware.InitVars();
                 }
             }
         }
@@ -204,13 +204,13 @@ namespace Asset_Managment {
             this.Namespace = "http://tempuri.org/mssql2001975DataSet1.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableAsset_Manager_Software = new Asset_Manager_SoftwareDataTable();
-            base.Tables.Add(this.tableAsset_Manager_Software);
+            this.tableAsset_Manager_Hardware = new Asset_Manager_HardwareDataTable();
+            base.Tables.Add(this.tableAsset_Manager_Hardware);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private bool ShouldSerializeAsset_Manager_Software() {
+        private bool ShouldSerializeAsset_Manager_Hardware() {
             return false;
         }
         
@@ -270,25 +270,35 @@ namespace Asset_Managment {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public delegate void Asset_Manager_SoftwareRowChangeEventHandler(object sender, Asset_Manager_SoftwareRowChangeEvent e);
+        public delegate void Asset_Manager_HardwareRowChangeEventHandler(object sender, Asset_Manager_HardwareRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class Asset_Manager_SoftwareDataTable : global::System.Data.TypedTableBase<Asset_Manager_SoftwareRow> {
+        public partial class Asset_Manager_HardwareDataTable : global::System.Data.TypedTableBase<Asset_Manager_HardwareRow> {
             
-            private global::System.Data.DataColumn columnOperating_System_Name;
+            private global::System.Data.DataColumn columnHardware_Id;
             
-            private global::System.Data.DataColumn columnVersion;
+            private global::System.Data.DataColumn columnSystem_Name;
+            
+            private global::System.Data.DataColumn columnModel;
             
             private global::System.Data.DataColumn columnManufacturer;
             
+            private global::System.Data.DataColumn columnType;
+            
+            private global::System.Data.DataColumn columnIP_Address;
+            
+            private global::System.Data.DataColumn columnPurchase_Date;
+            
+            private global::System.Data.DataColumn columnNote;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public Asset_Manager_SoftwareDataTable() {
-                this.TableName = "Asset_Manager_Software";
+            public Asset_Manager_HardwareDataTable() {
+                this.TableName = "Asset_Manager_Hardware";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -296,7 +306,7 @@ namespace Asset_Managment {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal Asset_Manager_SoftwareDataTable(global::System.Data.DataTable table) {
+            internal Asset_Manager_HardwareDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -313,24 +323,32 @@ namespace Asset_Managment {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected Asset_Manager_SoftwareDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected Asset_Manager_HardwareDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn Operating_System_NameColumn {
+            public global::System.Data.DataColumn Hardware_IdColumn {
                 get {
-                    return this.columnOperating_System_Name;
+                    return this.columnHardware_Id;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn VersionColumn {
+            public global::System.Data.DataColumn System_NameColumn {
                 get {
-                    return this.columnVersion;
+                    return this.columnSystem_Name;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn ModelColumn {
+                get {
+                    return this.columnModel;
                 }
             }
             
@@ -339,6 +357,38 @@ namespace Asset_Managment {
             public global::System.Data.DataColumn ManufacturerColumn {
                 get {
                     return this.columnManufacturer;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn TypeColumn {
+                get {
+                    return this.columnType;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn IP_AddressColumn {
+                get {
+                    return this.columnIP_Address;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Purchase_DateColumn {
+                get {
+                    return this.columnPurchase_Date;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn NoteColumn {
+                get {
+                    return this.columnNote;
                 }
             }
             
@@ -353,47 +403,52 @@ namespace Asset_Managment {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public Asset_Manager_SoftwareRow this[int index] {
+            public Asset_Manager_HardwareRow this[int index] {
                 get {
-                    return ((Asset_Manager_SoftwareRow)(this.Rows[index]));
+                    return ((Asset_Manager_HardwareRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event Asset_Manager_SoftwareRowChangeEventHandler Asset_Manager_SoftwareRowChanging;
+            public event Asset_Manager_HardwareRowChangeEventHandler Asset_Manager_HardwareRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event Asset_Manager_SoftwareRowChangeEventHandler Asset_Manager_SoftwareRowChanged;
+            public event Asset_Manager_HardwareRowChangeEventHandler Asset_Manager_HardwareRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event Asset_Manager_SoftwareRowChangeEventHandler Asset_Manager_SoftwareRowDeleting;
+            public event Asset_Manager_HardwareRowChangeEventHandler Asset_Manager_HardwareRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event Asset_Manager_SoftwareRowChangeEventHandler Asset_Manager_SoftwareRowDeleted;
+            public event Asset_Manager_HardwareRowChangeEventHandler Asset_Manager_HardwareRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void AddAsset_Manager_SoftwareRow(Asset_Manager_SoftwareRow row) {
+            public void AddAsset_Manager_HardwareRow(Asset_Manager_HardwareRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public Asset_Manager_SoftwareRow AddAsset_Manager_SoftwareRow(string Operating_System_Name, string Version, string Manufacturer) {
-                Asset_Manager_SoftwareRow rowAsset_Manager_SoftwareRow = ((Asset_Manager_SoftwareRow)(this.NewRow()));
+            public Asset_Manager_HardwareRow AddAsset_Manager_HardwareRow(string System_Name, string Model, string Manufacturer, string Type, string IP_Address, string Purchase_Date, string Note) {
+                Asset_Manager_HardwareRow rowAsset_Manager_HardwareRow = ((Asset_Manager_HardwareRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        Operating_System_Name,
-                        Version,
-                        Manufacturer};
-                rowAsset_Manager_SoftwareRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowAsset_Manager_SoftwareRow);
-                return rowAsset_Manager_SoftwareRow;
+                        null,
+                        System_Name,
+                        Model,
+                        Manufacturer,
+                        Type,
+                        IP_Address,
+                        Purchase_Date,
+                        Note};
+                rowAsset_Manager_HardwareRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowAsset_Manager_HardwareRow);
+                return rowAsset_Manager_HardwareRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                Asset_Manager_SoftwareDataTable cln = ((Asset_Manager_SoftwareDataTable)(base.Clone()));
+                Asset_Manager_HardwareDataTable cln = ((Asset_Manager_HardwareDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -401,55 +456,84 @@ namespace Asset_Managment {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new Asset_Manager_SoftwareDataTable();
+                return new Asset_Manager_HardwareDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
-                this.columnOperating_System_Name = base.Columns["Operating System Name"];
-                this.columnVersion = base.Columns["Version"];
+                this.columnHardware_Id = base.Columns["Hardware_Id"];
+                this.columnSystem_Name = base.Columns["System_Name"];
+                this.columnModel = base.Columns["Model"];
                 this.columnManufacturer = base.Columns["Manufacturer"];
+                this.columnType = base.Columns["Type"];
+                this.columnIP_Address = base.Columns["IP_Address"];
+                this.columnPurchase_Date = base.Columns["Purchase_Date"];
+                this.columnNote = base.Columns["Note"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             private void InitClass() {
-                this.columnOperating_System_Name = new global::System.Data.DataColumn("Operating System Name", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnOperating_System_Name);
-                this.columnVersion = new global::System.Data.DataColumn("Version", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnVersion);
+                this.columnHardware_Id = new global::System.Data.DataColumn("Hardware_Id", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnHardware_Id);
+                this.columnSystem_Name = new global::System.Data.DataColumn("System_Name", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSystem_Name);
+                this.columnModel = new global::System.Data.DataColumn("Model", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnModel);
                 this.columnManufacturer = new global::System.Data.DataColumn("Manufacturer", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnManufacturer);
-                this.columnOperating_System_Name.MaxLength = 50;
-                this.columnVersion.MaxLength = 10;
-                this.columnManufacturer.MaxLength = 30;
+                this.columnType = new global::System.Data.DataColumn("Type", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnType);
+                this.columnIP_Address = new global::System.Data.DataColumn("IP_Address", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnIP_Address);
+                this.columnPurchase_Date = new global::System.Data.DataColumn("Purchase_Date", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPurchase_Date);
+                this.columnNote = new global::System.Data.DataColumn("Note", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNote);
+                this.columnHardware_Id.AutoIncrement = true;
+                this.columnHardware_Id.AutoIncrementSeed = -1;
+                this.columnHardware_Id.AutoIncrementStep = -1;
+                this.columnHardware_Id.AllowDBNull = false;
+                this.columnHardware_Id.ReadOnly = true;
+                this.columnSystem_Name.AllowDBNull = false;
+                this.columnSystem_Name.MaxLength = 100;
+                this.columnModel.AllowDBNull = false;
+                this.columnModel.MaxLength = 100;
+                this.columnManufacturer.AllowDBNull = false;
+                this.columnManufacturer.MaxLength = 100;
+                this.columnType.AllowDBNull = false;
+                this.columnType.MaxLength = 50;
+                this.columnIP_Address.AllowDBNull = false;
+                this.columnIP_Address.MaxLength = 50;
+                this.columnPurchase_Date.MaxLength = 100;
+                this.columnNote.MaxLength = 2147483647;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public Asset_Manager_SoftwareRow NewAsset_Manager_SoftwareRow() {
-                return ((Asset_Manager_SoftwareRow)(this.NewRow()));
+            public Asset_Manager_HardwareRow NewAsset_Manager_HardwareRow() {
+                return ((Asset_Manager_HardwareRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new Asset_Manager_SoftwareRow(builder);
+                return new Asset_Manager_HardwareRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(Asset_Manager_SoftwareRow);
+                return typeof(Asset_Manager_HardwareRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.Asset_Manager_SoftwareRowChanged != null)) {
-                    this.Asset_Manager_SoftwareRowChanged(this, new Asset_Manager_SoftwareRowChangeEvent(((Asset_Manager_SoftwareRow)(e.Row)), e.Action));
+                if ((this.Asset_Manager_HardwareRowChanged != null)) {
+                    this.Asset_Manager_HardwareRowChanged(this, new Asset_Manager_HardwareRowChangeEvent(((Asset_Manager_HardwareRow)(e.Row)), e.Action));
                 }
             }
             
@@ -457,8 +541,8 @@ namespace Asset_Managment {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.Asset_Manager_SoftwareRowChanging != null)) {
-                    this.Asset_Manager_SoftwareRowChanging(this, new Asset_Manager_SoftwareRowChangeEvent(((Asset_Manager_SoftwareRow)(e.Row)), e.Action));
+                if ((this.Asset_Manager_HardwareRowChanging != null)) {
+                    this.Asset_Manager_HardwareRowChanging(this, new Asset_Manager_HardwareRowChangeEvent(((Asset_Manager_HardwareRow)(e.Row)), e.Action));
                 }
             }
             
@@ -466,8 +550,8 @@ namespace Asset_Managment {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.Asset_Manager_SoftwareRowDeleted != null)) {
-                    this.Asset_Manager_SoftwareRowDeleted(this, new Asset_Manager_SoftwareRowChangeEvent(((Asset_Manager_SoftwareRow)(e.Row)), e.Action));
+                if ((this.Asset_Manager_HardwareRowDeleted != null)) {
+                    this.Asset_Manager_HardwareRowDeleted(this, new Asset_Manager_HardwareRowChangeEvent(((Asset_Manager_HardwareRow)(e.Row)), e.Action));
                 }
             }
             
@@ -475,14 +559,14 @@ namespace Asset_Managment {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.Asset_Manager_SoftwareRowDeleting != null)) {
-                    this.Asset_Manager_SoftwareRowDeleting(this, new Asset_Manager_SoftwareRowChangeEvent(((Asset_Manager_SoftwareRow)(e.Row)), e.Action));
+                if ((this.Asset_Manager_HardwareRowDeleting != null)) {
+                    this.Asset_Manager_HardwareRowDeleting(this, new Asset_Manager_HardwareRowChangeEvent(((Asset_Manager_HardwareRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void RemoveAsset_Manager_SoftwareRow(Asset_Manager_SoftwareRow row) {
+            public void RemoveAsset_Manager_HardwareRow(Asset_Manager_HardwareRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -509,7 +593,7 @@ namespace Asset_Managment {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "Asset_Manager_SoftwareDataTable";
+                attribute2.FixedValue = "Asset_Manager_HardwareDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -553,47 +637,47 @@ namespace Asset_Managment {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class Asset_Manager_SoftwareRow : global::System.Data.DataRow {
+        public partial class Asset_Manager_HardwareRow : global::System.Data.DataRow {
             
-            private Asset_Manager_SoftwareDataTable tableAsset_Manager_Software;
+            private Asset_Manager_HardwareDataTable tableAsset_Manager_Hardware;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal Asset_Manager_SoftwareRow(global::System.Data.DataRowBuilder rb) : 
+            internal Asset_Manager_HardwareRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableAsset_Manager_Software = ((Asset_Manager_SoftwareDataTable)(this.Table));
+                this.tableAsset_Manager_Hardware = ((Asset_Manager_HardwareDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string Operating_System_Name {
+            public int Hardware_Id {
                 get {
-                    try {
-                        return ((string)(this[this.tableAsset_Manager_Software.Operating_System_NameColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Operating System Name\' in table \'Asset_Manager_Software\' is" +
-                                " DBNull.", e);
-                    }
+                    return ((int)(this[this.tableAsset_Manager_Hardware.Hardware_IdColumn]));
                 }
                 set {
-                    this[this.tableAsset_Manager_Software.Operating_System_NameColumn] = value;
+                    this[this.tableAsset_Manager_Hardware.Hardware_IdColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string Version {
+            public string System_Name {
                 get {
-                    try {
-                        return ((string)(this[this.tableAsset_Manager_Software.VersionColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Version\' in table \'Asset_Manager_Software\' is DBNull.", e);
-                    }
+                    return ((string)(this[this.tableAsset_Manager_Hardware.System_NameColumn]));
                 }
                 set {
-                    this[this.tableAsset_Manager_Software.VersionColumn] = value;
+                    this[this.tableAsset_Manager_Hardware.System_NameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Model {
+                get {
+                    return ((string)(this[this.tableAsset_Manager_Hardware.ModelColumn]));
+                }
+                set {
+                    this[this.tableAsset_Manager_Hardware.ModelColumn] = value;
                 }
             }
             
@@ -601,52 +685,90 @@ namespace Asset_Managment {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public string Manufacturer {
                 get {
+                    return ((string)(this[this.tableAsset_Manager_Hardware.ManufacturerColumn]));
+                }
+                set {
+                    this[this.tableAsset_Manager_Hardware.ManufacturerColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Type {
+                get {
+                    return ((string)(this[this.tableAsset_Manager_Hardware.TypeColumn]));
+                }
+                set {
+                    this[this.tableAsset_Manager_Hardware.TypeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string IP_Address {
+                get {
+                    return ((string)(this[this.tableAsset_Manager_Hardware.IP_AddressColumn]));
+                }
+                set {
+                    this[this.tableAsset_Manager_Hardware.IP_AddressColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Purchase_Date {
+                get {
                     try {
-                        return ((string)(this[this.tableAsset_Manager_Software.ManufacturerColumn]));
+                        return ((string)(this[this.tableAsset_Manager_Hardware.Purchase_DateColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Manufacturer\' in table \'Asset_Manager_Software\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Purchase_Date\' in table \'Asset_Manager_Hardware\' is DBNull." +
+                                "", e);
                     }
                 }
                 set {
-                    this[this.tableAsset_Manager_Software.ManufacturerColumn] = value;
+                    this[this.tableAsset_Manager_Hardware.Purchase_DateColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsOperating_System_NameNull() {
-                return this.IsNull(this.tableAsset_Manager_Software.Operating_System_NameColumn);
+            public string Note {
+                get {
+                    try {
+                        return ((string)(this[this.tableAsset_Manager_Hardware.NoteColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Note\' in table \'Asset_Manager_Hardware\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableAsset_Manager_Hardware.NoteColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetOperating_System_NameNull() {
-                this[this.tableAsset_Manager_Software.Operating_System_NameColumn] = global::System.Convert.DBNull;
+            public bool IsPurchase_DateNull() {
+                return this.IsNull(this.tableAsset_Manager_Hardware.Purchase_DateColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsVersionNull() {
-                return this.IsNull(this.tableAsset_Manager_Software.VersionColumn);
+            public void SetPurchase_DateNull() {
+                this[this.tableAsset_Manager_Hardware.Purchase_DateColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetVersionNull() {
-                this[this.tableAsset_Manager_Software.VersionColumn] = global::System.Convert.DBNull;
+            public bool IsNoteNull() {
+                return this.IsNull(this.tableAsset_Manager_Hardware.NoteColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsManufacturerNull() {
-                return this.IsNull(this.tableAsset_Manager_Software.ManufacturerColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetManufacturerNull() {
-                this[this.tableAsset_Manager_Software.ManufacturerColumn] = global::System.Convert.DBNull;
+            public void SetNoteNull() {
+                this[this.tableAsset_Manager_Hardware.NoteColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -654,22 +776,22 @@ namespace Asset_Managment {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public class Asset_Manager_SoftwareRowChangeEvent : global::System.EventArgs {
+        public class Asset_Manager_HardwareRowChangeEvent : global::System.EventArgs {
             
-            private Asset_Manager_SoftwareRow eventRow;
+            private Asset_Manager_HardwareRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public Asset_Manager_SoftwareRowChangeEvent(Asset_Manager_SoftwareRow row, global::System.Data.DataRowAction action) {
+            public Asset_Manager_HardwareRowChangeEvent(Asset_Manager_HardwareRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public Asset_Manager_SoftwareRow Row {
+            public Asset_Manager_HardwareRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -697,7 +819,7 @@ namespace Asset_Managment.mssql2001975DataSet1TableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class Asset_Manager_SoftwareTableAdapter : global::System.ComponentModel.Component {
+    public partial class Asset_Manager_HardwareTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -711,7 +833,7 @@ namespace Asset_Managment.mssql2001975DataSet1TableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public Asset_Manager_SoftwareTableAdapter() {
+        public Asset_Manager_HardwareTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -808,19 +930,29 @@ namespace Asset_Managment.mssql2001975DataSet1TableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "Asset_Manager_Software";
-            tableMapping.ColumnMappings.Add("Operating System Name", "Operating System Name");
-            tableMapping.ColumnMappings.Add("Version", "Version");
+            tableMapping.DataSetTable = "Asset_Manager_Hardware";
+            tableMapping.ColumnMappings.Add("Hardware_Id", "Hardware_Id");
+            tableMapping.ColumnMappings.Add("System_Name", "System_Name");
+            tableMapping.ColumnMappings.Add("Model", "Model");
             tableMapping.ColumnMappings.Add("Manufacturer", "Manufacturer");
+            tableMapping.ColumnMappings.Add("Type", "Type");
+            tableMapping.ColumnMappings.Add("IP_Address", "IP_Address");
+            tableMapping.ColumnMappings.Add("Purchase_Date", "Purchase_Date");
+            tableMapping.ColumnMappings.Add("Note", "Note");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Asset_Manager_Software] ([Operating System Name], [Version], [" +
-                "Manufacturer]) VALUES (@Operating_System_Name, @Version, @Manufacturer)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Asset_Manager_Hardware] ([System_Name], [Model], [Manufacturer" +
+                "], [Type], [IP_Address], [Purchase_Date], [Note]) VALUES (@System_Name, @Model, " +
+                "@Manufacturer, @Type, @IP_Address, @Purchase_Date, @Note)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Operating_System_Name", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Operating System Name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Version", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Version", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@System_Name", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "System_Name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Model", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Model", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Manufacturer", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Manufacturer", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Type", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Type", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IP_Address", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IP_Address", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Purchase_Date", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Purchase_Date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Note", global::System.Data.SqlDbType.Text, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Note", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -836,8 +968,8 @@ namespace Asset_Managment.mssql2001975DataSet1TableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT [Operating System Name], Version, Manufacturer FROM dbo.Asset_Manager_Soft" +
-                "ware";
+            this._commandCollection[0].CommandText = "SELECT Hardware_Id, System_Name, Model, Manufacturer, Type, IP_Address, Purchase_" +
+                "Date, Note FROM dbo.Asset_Manager_Hardware";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -845,7 +977,7 @@ namespace Asset_Managment.mssql2001975DataSet1TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(mssql2001975DataSet1.Asset_Manager_SoftwareDataTable dataTable) {
+        public virtual int Fill(mssql2001975DataSet1.Asset_Manager_HardwareDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -858,9 +990,9 @@ namespace Asset_Managment.mssql2001975DataSet1TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual mssql2001975DataSet1.Asset_Manager_SoftwareDataTable GetData() {
+        public virtual mssql2001975DataSet1.Asset_Manager_HardwareDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            mssql2001975DataSet1.Asset_Manager_SoftwareDataTable dataTable = new mssql2001975DataSet1.Asset_Manager_SoftwareDataTable();
+            mssql2001975DataSet1.Asset_Manager_HardwareDataTable dataTable = new mssql2001975DataSet1.Asset_Manager_HardwareDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -868,7 +1000,7 @@ namespace Asset_Managment.mssql2001975DataSet1TableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(mssql2001975DataSet1.Asset_Manager_SoftwareDataTable dataTable) {
+        public virtual int Update(mssql2001975DataSet1.Asset_Manager_HardwareDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
@@ -876,7 +1008,7 @@ namespace Asset_Managment.mssql2001975DataSet1TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(mssql2001975DataSet1 dataSet) {
-            return this.Adapter.Update(dataSet, "Asset_Manager_Software");
+            return this.Adapter.Update(dataSet, "Asset_Manager_Hardware");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -898,24 +1030,48 @@ namespace Asset_Managment.mssql2001975DataSet1TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string Operating_System_Name, string Version, string Manufacturer) {
-            if ((Operating_System_Name == null)) {
-                this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
+        public virtual int Insert(string System_Name, string Model, string Manufacturer, string Type, string IP_Address, string Purchase_Date, string Note) {
+            if ((System_Name == null)) {
+                throw new global::System.ArgumentNullException("System_Name");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(Operating_System_Name));
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(System_Name));
             }
-            if ((Version == null)) {
-                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
+            if ((Model == null)) {
+                throw new global::System.ArgumentNullException("Model");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Version));
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Model));
             }
             if ((Manufacturer == null)) {
-                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
+                throw new global::System.ArgumentNullException("Manufacturer");
             }
             else {
                 this.Adapter.InsertCommand.Parameters[2].Value = ((string)(Manufacturer));
+            }
+            if ((Type == null)) {
+                throw new global::System.ArgumentNullException("Type");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(Type));
+            }
+            if ((IP_Address == null)) {
+                throw new global::System.ArgumentNullException("IP_Address");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(IP_Address));
+            }
+            if ((Purchase_Date == null)) {
+                this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(Purchase_Date));
+            }
+            if ((Note == null)) {
+                this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[6].Value = ((string)(Note));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -946,7 +1102,7 @@ namespace Asset_Managment.mssql2001975DataSet1TableAdapters {
         
         private UpdateOrderOption _updateOrder;
         
-        private Asset_Manager_SoftwareTableAdapter _asset_Manager_SoftwareTableAdapter;
+        private Asset_Manager_HardwareTableAdapter _asset_Manager_HardwareTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -968,12 +1124,12 @@ namespace Asset_Managment.mssql2001975DataSet1TableAdapters {
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public Asset_Manager_SoftwareTableAdapter Asset_Manager_SoftwareTableAdapter {
+        public Asset_Manager_HardwareTableAdapter Asset_Manager_HardwareTableAdapter {
             get {
-                return this._asset_Manager_SoftwareTableAdapter;
+                return this._asset_Manager_HardwareTableAdapter;
             }
             set {
-                this._asset_Manager_SoftwareTableAdapter = value;
+                this._asset_Manager_HardwareTableAdapter = value;
             }
         }
         
@@ -996,9 +1152,9 @@ namespace Asset_Managment.mssql2001975DataSet1TableAdapters {
                 if ((this._connection != null)) {
                     return this._connection;
                 }
-                if (((this._asset_Manager_SoftwareTableAdapter != null) 
-                            && (this._asset_Manager_SoftwareTableAdapter.Connection != null))) {
-                    return this._asset_Manager_SoftwareTableAdapter.Connection;
+                if (((this._asset_Manager_HardwareTableAdapter != null) 
+                            && (this._asset_Manager_HardwareTableAdapter.Connection != null))) {
+                    return this._asset_Manager_HardwareTableAdapter.Connection;
                 }
                 return null;
             }
@@ -1013,7 +1169,7 @@ namespace Asset_Managment.mssql2001975DataSet1TableAdapters {
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
-                if ((this._asset_Manager_SoftwareTableAdapter != null)) {
+                if ((this._asset_Manager_HardwareTableAdapter != null)) {
                     count = (count + 1);
                 }
                 return count;
@@ -1027,12 +1183,12 @@ namespace Asset_Managment.mssql2001975DataSet1TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private int UpdateUpdatedRows(mssql2001975DataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._asset_Manager_SoftwareTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Asset_Manager_Software.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._asset_Manager_HardwareTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Asset_Manager_Hardware.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._asset_Manager_SoftwareTableAdapter.Update(updatedRows));
+                    result = (result + this._asset_Manager_HardwareTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -1046,11 +1202,11 @@ namespace Asset_Managment.mssql2001975DataSet1TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private int UpdateInsertedRows(mssql2001975DataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._asset_Manager_SoftwareTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Asset_Manager_Software.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._asset_Manager_HardwareTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Asset_Manager_Hardware.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._asset_Manager_SoftwareTableAdapter.Update(addedRows));
+                    result = (result + this._asset_Manager_HardwareTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -1064,11 +1220,11 @@ namespace Asset_Managment.mssql2001975DataSet1TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private int UpdateDeletedRows(mssql2001975DataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._asset_Manager_SoftwareTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Asset_Manager_Software.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._asset_Manager_HardwareTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Asset_Manager_Hardware.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._asset_Manager_SoftwareTableAdapter.Update(deletedRows));
+                    result = (result + this._asset_Manager_HardwareTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -1111,8 +1267,8 @@ namespace Asset_Managment.mssql2001975DataSet1TableAdapters {
             if ((dataSet.HasChanges() == false)) {
                 return 0;
             }
-            if (((this._asset_Manager_SoftwareTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._asset_Manager_SoftwareTableAdapter.Connection) == false))) {
+            if (((this._asset_Manager_HardwareTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._asset_Manager_HardwareTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
@@ -1148,13 +1304,13 @@ namespace Asset_Managment.mssql2001975DataSet1TableAdapters {
             try {
                 // ---- Prepare for update -----------
                 //
-                if ((this._asset_Manager_SoftwareTableAdapter != null)) {
-                    revertConnections.Add(this._asset_Manager_SoftwareTableAdapter, this._asset_Manager_SoftwareTableAdapter.Connection);
-                    this._asset_Manager_SoftwareTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._asset_Manager_SoftwareTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._asset_Manager_SoftwareTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._asset_Manager_SoftwareTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._asset_Manager_SoftwareTableAdapter.Adapter);
+                if ((this._asset_Manager_HardwareTableAdapter != null)) {
+                    revertConnections.Add(this._asset_Manager_HardwareTableAdapter, this._asset_Manager_HardwareTableAdapter.Connection);
+                    this._asset_Manager_HardwareTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._asset_Manager_HardwareTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._asset_Manager_HardwareTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._asset_Manager_HardwareTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._asset_Manager_HardwareTableAdapter.Adapter);
                     }
                 }
                 // 
@@ -1215,9 +1371,9 @@ namespace Asset_Managment.mssql2001975DataSet1TableAdapters {
                 if (workConnOpened) {
                     workConnection.Close();
                 }
-                if ((this._asset_Manager_SoftwareTableAdapter != null)) {
-                    this._asset_Manager_SoftwareTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._asset_Manager_SoftwareTableAdapter]));
-                    this._asset_Manager_SoftwareTableAdapter.Transaction = null;
+                if ((this._asset_Manager_HardwareTableAdapter != null)) {
+                    this._asset_Manager_HardwareTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._asset_Manager_HardwareTableAdapter]));
+                    this._asset_Manager_HardwareTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];

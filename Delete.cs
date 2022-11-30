@@ -66,8 +66,8 @@ namespace Asset_Managment
 
         private void Delete_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'mssql2001975DataSet2.Asset_Manager' table. You can move, or remove it, as needed.
-            this.asset_ManagerTableAdapter.Fill(this.mssql2001975DataSet2.Asset_Manager);
+            // TODO: This line of code loads data into the 'mssql2001975DataSet2.Asset_Manager_Hardware' table. You can move, or remove it, as needed.
+            this.asset_Manager_HardwareTableAdapter.Fill(this.mssql2001975DataSet2.Asset_Manager_Hardware);
 
         }
     }

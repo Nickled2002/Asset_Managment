@@ -33,26 +33,28 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.assetManagerSoftwareBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.mssql2001975DataSet1 = new Asset_Managment.mssql2001975DataSet1();
-            this.asset_Manager_SoftwareTableAdapter = new Asset_Managment.mssql2001975DataSet1TableAdapters.Asset_Manager_SoftwareTableAdapter();
             this.AddBtn = new System.Windows.Forms.Button();
             this.EditBtn = new System.Windows.Forms.Button();
             this.DeleteBtn = new System.Windows.Forms.Button();
             this.TMSBtn = new System.Windows.Forms.Button();
             this.BackBtn = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.mssql2001975DataSet4 = new Asset_Managment.mssql2001975DataSet4();
             this.assetManagerSoftwareBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.asset_Manager_SoftwareTableAdapter1 = new Asset_Managment.mssql2001975DataSet4TableAdapters.Asset_Manager_SoftwareTableAdapter();
+            this.assetManagerSoftwareBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.mssql2001975DataSet = new Asset_Managment.mssql2001975DataSet();
+            this.assetManagerSoftwareBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
+            this.asset_Manager_SoftwareTableAdapter = new Asset_Managment.mssql2001975DataSetTableAdapters.Asset_Manager_SoftwareTableAdapter();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.operatingSystemNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.versionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.manufacturerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.assetManagerSoftwareBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mssql2001975DataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mssql2001975DataSet4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.assetManagerSoftwareBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.assetManagerSoftwareBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mssql2001975DataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.assetManagerSoftwareBindingSource3)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -79,20 +81,6 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "ScottishGlen Software Assets";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // assetManagerSoftwareBindingSource
-            // 
-            this.assetManagerSoftwareBindingSource.DataMember = "Asset_Manager_Software";
-            this.assetManagerSoftwareBindingSource.DataSource = this.mssql2001975DataSet1;
-            // 
-            // mssql2001975DataSet1
-            // 
-            this.mssql2001975DataSet1.DataSetName = "mssql2001975DataSet1";
-            this.mssql2001975DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // asset_Manager_SoftwareTableAdapter
-            // 
-            this.asset_Manager_SoftwareTableAdapter.ClearBeforeFill = true;
             // 
             // AddBtn
             // 
@@ -151,31 +139,41 @@
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn4,
             this.operatingSystemNameDataGridViewTextBoxColumn,
             this.versionDataGridViewTextBoxColumn,
             this.manufacturerDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.assetManagerSoftwareBindingSource1;
-            this.dataGridView1.Location = new System.Drawing.Point(1, 84);
+            this.dataGridView1.DataSource = this.assetManagerSoftwareBindingSource3;
+            this.dataGridView1.Location = new System.Drawing.Point(1, 85);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(683, 234);
+            this.dataGridView1.Size = new System.Drawing.Size(683, 233);
             this.dataGridView1.TabIndex = 11;
             // 
-            // mssql2001975DataSet4
+            // mssql2001975DataSet
             // 
-            this.mssql2001975DataSet4.DataSetName = "mssql2001975DataSet4";
-            this.mssql2001975DataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.mssql2001975DataSet.DataSetName = "mssql2001975DataSet";
+            this.mssql2001975DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // assetManagerSoftwareBindingSource1
+            // assetManagerSoftwareBindingSource3
             // 
-            this.assetManagerSoftwareBindingSource1.DataMember = "Asset_Manager_Software";
-            this.assetManagerSoftwareBindingSource1.DataSource = this.mssql2001975DataSet4;
+            this.assetManagerSoftwareBindingSource3.DataMember = "Asset_Manager_Software";
+            this.assetManagerSoftwareBindingSource3.DataSource = this.mssql2001975DataSet;
             // 
-            // asset_Manager_SoftwareTableAdapter1
+            // asset_Manager_SoftwareTableAdapter
             // 
-            this.asset_Manager_SoftwareTableAdapter1.ClearBeforeFill = true;
+            this.asset_Manager_SoftwareTableAdapter.ClearBeforeFill = true;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "Software_Id";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Software_Id";
+            this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            this.dataGridViewTextBoxColumn4.Width = 125;
             // 
             // operatingSystemNameDataGridViewTextBoxColumn
             // 
@@ -222,10 +220,11 @@
             this.Load += new System.EventHandler(this.SoftwareMain_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.assetManagerSoftwareBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mssql2001975DataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mssql2001975DataSet4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.assetManagerSoftwareBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.assetManagerSoftwareBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mssql2001975DataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.assetManagerSoftwareBindingSource3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -234,18 +233,19 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label2;
-        private mssql2001975DataSet1 mssql2001975DataSet1;
         private System.Windows.Forms.BindingSource assetManagerSoftwareBindingSource;
-        private mssql2001975DataSet1TableAdapters.Asset_Manager_SoftwareTableAdapter asset_Manager_SoftwareTableAdapter;
         private System.Windows.Forms.Button AddBtn;
         private System.Windows.Forms.Button EditBtn;
         private System.Windows.Forms.Button DeleteBtn;
         private System.Windows.Forms.Button TMSBtn;
         private System.Windows.Forms.Button BackBtn;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private mssql2001975DataSet4 mssql2001975DataSet4;
         private System.Windows.Forms.BindingSource assetManagerSoftwareBindingSource1;
-        private mssql2001975DataSet4TableAdapters.Asset_Manager_SoftwareTableAdapter asset_Manager_SoftwareTableAdapter1;
+        private System.Windows.Forms.BindingSource assetManagerSoftwareBindingSource2;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private mssql2001975DataSet mssql2001975DataSet;
+        private System.Windows.Forms.BindingSource assetManagerSoftwareBindingSource3;
+        private mssql2001975DataSetTableAdapters.Asset_Manager_SoftwareTableAdapter asset_Manager_SoftwareTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn operatingSystemNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn versionDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn manufacturerDataGridViewTextBoxColumn;

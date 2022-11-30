@@ -35,5 +35,10 @@ namespace Asset_Managment
         {
 
         }
+
+        private void SnHBtn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
