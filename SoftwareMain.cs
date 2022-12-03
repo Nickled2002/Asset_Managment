@@ -27,8 +27,8 @@ namespace Asset_Managment
 
         private void AddBtn_Click(object sender, EventArgs e)
         {
-            AddS adds = new AddS();
-            adds.Show();
+            ThisMachineS thisMachineS = new ThisMachineS();
+            thisMachineS.Show();
             this.Close();
         }
 
@@ -50,12 +50,6 @@ namespace Asset_Managment
             this.Close();
         }
 
-        private void TMSBtn_Click(object sender, EventArgs e)
-        {
-            ThisMachineS thisMachineS = new ThisMachineS();
-            thisMachineS.Show();
-            this.Close();
-        }
 
         private void BackBtn_Click(object sender, EventArgs e)
         {

@@ -36,25 +36,24 @@
             this.AddBtn = new System.Windows.Forms.Button();
             this.EditBtn = new System.Windows.Forms.Button();
             this.DeleteBtn = new System.Windows.Forms.Button();
-            this.TMSBtn = new System.Windows.Forms.Button();
             this.BackBtn = new System.Windows.Forms.Button();
             this.assetManagerSoftwareBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.assetManagerSoftwareBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.mssql2001975DataSet = new Asset_Managment.mssql2001975DataSet();
-            this.assetManagerSoftwareBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
-            this.asset_Manager_SoftwareTableAdapter = new Asset_Managment.mssql2001975DataSetTableAdapters.Asset_Manager_SoftwareTableAdapter();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.operatingSystemNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.versionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.manufacturerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.assetManagerSoftwareBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
+            this.mssql2001975DataSet = new Asset_Managment.mssql2001975DataSet();
+            this.asset_Manager_SoftwareTableAdapter = new Asset_Managment.mssql2001975DataSetTableAdapters.Asset_Manager_SoftwareTableAdapter();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.assetManagerSoftwareBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.assetManagerSoftwareBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.assetManagerSoftwareBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mssql2001975DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.assetManagerSoftwareBindingSource3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mssql2001975DataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -112,16 +111,6 @@
             this.DeleteBtn.UseVisualStyleBackColor = true;
             this.DeleteBtn.Click += new System.EventHandler(this.DeleteBtn_Click);
             // 
-            // TMSBtn
-            // 
-            this.TMSBtn.Location = new System.Drawing.Point(351, 324);
-            this.TMSBtn.Name = "TMSBtn";
-            this.TMSBtn.Size = new System.Drawing.Size(108, 50);
-            this.TMSBtn.TabIndex = 9;
-            this.TMSBtn.Text = "System Software";
-            this.TMSBtn.UseVisualStyleBackColor = true;
-            this.TMSBtn.Click += new System.EventHandler(this.TMSBtn_Click);
-            // 
             // BackBtn
             // 
             this.BackBtn.Location = new System.Drawing.Point(564, 324);
@@ -151,20 +140,6 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(683, 233);
             this.dataGridView1.TabIndex = 11;
-            // 
-            // mssql2001975DataSet
-            // 
-            this.mssql2001975DataSet.DataSetName = "mssql2001975DataSet";
-            this.mssql2001975DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // assetManagerSoftwareBindingSource3
-            // 
-            this.assetManagerSoftwareBindingSource3.DataMember = "Asset_Manager_Software";
-            this.assetManagerSoftwareBindingSource3.DataSource = this.mssql2001975DataSet;
-            // 
-            // asset_Manager_SoftwareTableAdapter
-            // 
-            this.asset_Manager_SoftwareTableAdapter.ClearBeforeFill = true;
             // 
             // dataGridViewTextBoxColumn4
             // 
@@ -202,6 +177,20 @@
             this.manufacturerDataGridViewTextBoxColumn.ReadOnly = true;
             this.manufacturerDataGridViewTextBoxColumn.Width = 125;
             // 
+            // assetManagerSoftwareBindingSource3
+            // 
+            this.assetManagerSoftwareBindingSource3.DataMember = "Asset_Manager_Software";
+            this.assetManagerSoftwareBindingSource3.DataSource = this.mssql2001975DataSet;
+            // 
+            // mssql2001975DataSet
+            // 
+            this.mssql2001975DataSet.DataSetName = "mssql2001975DataSet";
+            this.mssql2001975DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // asset_Manager_SoftwareTableAdapter
+            // 
+            this.asset_Manager_SoftwareTableAdapter.ClearBeforeFill = true;
+            // 
             // SoftwareMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -209,7 +198,6 @@
             this.ClientSize = new System.Drawing.Size(684, 386);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.BackBtn);
-            this.Controls.Add(this.TMSBtn);
             this.Controls.Add(this.DeleteBtn);
             this.Controls.Add(this.EditBtn);
             this.Controls.Add(this.AddBtn);
@@ -223,8 +211,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.assetManagerSoftwareBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.assetManagerSoftwareBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mssql2001975DataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.assetManagerSoftwareBindingSource3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mssql2001975DataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -237,7 +225,6 @@
         private System.Windows.Forms.Button AddBtn;
         private System.Windows.Forms.Button EditBtn;
         private System.Windows.Forms.Button DeleteBtn;
-        private System.Windows.Forms.Button TMSBtn;
         private System.Windows.Forms.Button BackBtn;
         private System.Windows.Forms.BindingSource assetManagerSoftwareBindingSource1;
         private System.Windows.Forms.BindingSource assetManagerSoftwareBindingSource2;
